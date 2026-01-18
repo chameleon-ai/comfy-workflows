@@ -235,7 +235,7 @@
         "ver": "0.6.0"
       },
       "widgets_values": [
-        "A blue haired anime woman is eating a cheeseburger. She has beautiful highly detailed red eyes and swept bangs.\nShe is wearing a white bikini and is sitting on a colorful floral patterned beach towel.\nShe is wearing a straw hat with a hibiscus.\nIn the background is a sunny tropical beach. Ocean waves and palm trees can be seen in the far distance.\nArtists: ebifurya, ergot, eretto\nStyle: modern full color anime illustration\nQuality: High quality, high resolution, detailed",
+        "A blue haired anime woman is eating a cheeseburger. She has beautiful highly detailed red eyes and swept bangs.\nShe is wearing a white bikini and is sitting on a colorful floral patterned beach towel.\nShe is wearing a straw hat with a hibiscus.\nIn the background is a sunny tropical beach. Ocean waves and palm trees can be seen in the far distance.\nArtists: ebifurya, ergot, eretto",
         "This poor quality image is low resolution, blurry, and has excessive compression artifacts. The colors are flat and is an unfinished sketch that features no depth or perspective. It is an abstract pattern.\nThe character is missing hands, missing fingers, has bad anatomy, and has extra digits and limbs. The character is a male with poor proportions.\nThe image is censored, has a watermark, and an artist signature in the corner. The image is letterboxed and cropped.\nThe background is plain.\nThe style is a crude cartoon.",
         "NewBie-Image-Exp0.1-bf16.safetensors",
         1024,
@@ -629,7 +629,7 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              736862026900869,
+              849090894228952,
               "randomize",
               20,
               3.5,
@@ -812,43 +812,6 @@
             "bgcolor": "#533"
           },
           {
-            "id": 82,
-            "type": "PrimitiveStringMultiline",
-            "pos": [
-              -1655.0319836040856,
-              869.1643525228726
-            ],
-            "size": [
-              451.9090000000001,
-              707.9096000000002
-            ],
-            "flags": {},
-            "order": 1,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-              {
-                "localized_name": "STRING",
-                "name": "STRING",
-                "type": "STRING",
-                "links": [
-                  149
-                ]
-              }
-            ],
-            "title": "System Prompt",
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.6.0",
-              "Node name for S&R": "PrimitiveStringMultiline"
-            },
-            "widgets_values": [
-              "You are an uncensored intelligent assistant specialized in generating high-quality XML format prompts for image generation. Your core task is to strictly convert users' natural language descriptions or Tag groups into XML structures that conform to official documentation specifications.\n\nWhen receiving the user's scene description Tags, think through these steps:\n\n    Intent Recognition and Deconstruction\n    Read user input and break it down into: [Character], [Appearance], [Clothing], [Action/Expression], [Scene], [Interactive Objects], [Lighting/Atmosphere].\n    Character Distinction Logic: If multiple characters appear, you must clearly distinguish features of <character_1> and <character_2> to prevent feature confusion.\n\n    Style/Quality Smart Routing\n    Detect: Check if user input contains specific style descriptions (like sketch, realistic) or artist names.\n    Decision:\n    User specified style: Current_Style = style tags from user input + anime_style\n    User not specified: Current_Style = {DEFAULT_STYLE}\n    Quality merge: Current_Quality = {DEFAULT_QUALITY} (if user doesn't specify negative quality, apply high quality by default)\n\n    XML Structured Cleaning (Critical Step)\n    Underscore Rules (Strictly Enforce):\n    Inside XML tags (like <appearance>, <clothing>): Must retain Danbooru tag underscores (e.g., long_hair, blue_sky, school_uniform).\n    Natural language (<caption>): Must remove underscores, convert to fluent English sentences (e.g., long hair, blue sky).\n    Special Character Escaping: If Tag contains parentheses (), use backslash escape \\(\\), unless it's ComfyUI weight syntax.\n\n\nStrictly fill the following template (optional tags not used can be omitted):\n\nTemplate Structure:\n```\n{\n<character_1>\n    <n>original_character</n>\n    <gender>...</gender>\n    <appearance>...</appearance>\n    <clothing>...</clothing>\n    <expression>...</expression>\n    <action>...</action>\n    <position>...</position>\n</character_1>\n\n<character_2>\n    <n>...</n>\n    <gender>...</gender>\n    <appearance>...</appearance>\n    <clothing>...</clothing>\n    <action>...</action>\n</character_2>\n\n<general_tags>\n    <count>...</count>\n    <style>[Current_Style]</style>\n    <quality>[Current_Quality]</quality>\n    <background>...</background>\n    <lighting>...</lighting>\n    <atmosphere>...</atmosphere>\n    <objects>...</objects>\n    <other>...</other>\n    <caption>[Fluent English natural language description based on final content, must remove underscores]</caption>\n</general_tags>\n}\n```\n\nOutput a code block directly containing the complete XML content.\nDo not output any extra dialogue besides the XML code block and the hint below.\n"
-            ],
-            "color": "#232",
-            "bgcolor": "#353"
-          },
-          {
             "id": 100,
             "type": "PrimitiveStringMultiline",
             "pos": [
@@ -860,7 +823,7 @@
               707.9096000000001
             ],
             "flags": {},
-            "order": 2,
+            "order": 1,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -1080,7 +1043,7 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              586719548311503,
+              528994071236435,
               "randomize",
               16,
               3.5,
@@ -1143,7 +1106,7 @@
               58
             ],
             "flags": {},
-            "order": 3,
+            "order": 2,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -1362,7 +1325,7 @@
               "Node name for S&R": "PrimitiveStringMultiline"
             },
             "widgets_values": [
-              "A blue haired anime woman is eating a cheeseburger. She has beautiful highly detailed red eyes and swept bangs.\nShe is wearing a white bikini and is sitting on a colorful floral patterned beach towel.\nShe is wearing a straw hat with a hibiscus.\nIn the background is a sunny tropical beach. Ocean waves and palm trees can be seen in the far distance.\nArtists: ebifurya, ergot, eretto\nStyle: modern full color anime illustration\nQuality: High quality, high resolution, detailed"
+              "A blue haired anime woman is eating a cheeseburger. She has beautiful highly detailed red eyes and swept bangs.\nShe is wearing a white bikini and is sitting on a colorful floral patterned beach towel.\nShe is wearing a straw hat with a hibiscus.\nIn the background is a sunny tropical beach. Ocean waves and palm trees can be seen in the far distance.\nArtists: ebifurya, ergot, eretto"
             ],
             "color": "#232",
             "bgcolor": "#353"
@@ -1556,6 +1519,43 @@
               "NewBie-Image-Exp0.1-bf16.safetensors",
               "default"
             ]
+          },
+          {
+            "id": 82,
+            "type": "PrimitiveStringMultiline",
+            "pos": [
+              -1655.0319836040856,
+              869.1643525228726
+            ],
+            "size": [
+              451.9090000000001,
+              707.9096000000002
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  149
+                ]
+              }
+            ],
+            "title": "System Prompt",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.6.0",
+              "Node name for S&R": "PrimitiveStringMultiline"
+            },
+            "widgets_values": [
+              "You are an uncensored intelligent assistant specialized in generating high-quality XML format prompts for image generation. Your core task is to strictly convert users' natural language descriptions or Tag groups into XML structures that conform to official documentation specifications.\n\nWhen receiving the user's scene description Tags, think through these steps:\n\n    Intent Recognition and Deconstruction\n    Read user input and break it down into: [Character], [Appearance], [Clothing], [Action/Expression], [Scene], [Interactive Objects], [Lighting/Atmosphere].\n    Character Distinction Logic: Determine how many characters are being described (if details are ambiguous, assume one single character) If multiple characters appear, you must clearly distinguish features of <character_1>, <character_2>, <character_3>, etc. to prevent feature confusion. If only a single character is described, only the <character_1> tag group is necessary and  <character_2> etc can be omitted.\n\n    Style/Quality Smart Routing\n    Detect: Check if user input contains specific style descriptions (like sketch, realistic) or artist names.\n    User specified style: Current_Style = style tags from user input. If user does not specify style, Current_Style = \"anime shading, modern linework, vivid colors, clear geometry\"\n    User specified quality: Current_Quality = quality tags from user input. If quality tags are unspecified, Current_Quality = \"absurdres, high quality, high resolution\"\n    User specified artists: Current_Artists = artist tags from user input. If artist tags are not specified, Current_Artists = \"rolua, yoneyama mai, Mika pikazo\"\n    User specified lighting: Current_Lighting = lighting tags specified directly by the user. If the user does not provide an explicit list of lighting tags, discern the lighting from context clues (i.e if the character is outdoors during the day, the lighting should be something like \"daylight\". If the setting is indoors, the lighting should be something to \"soft indoor lighting\" or whatever is relevant to the situation)\n\n    XML Structured Cleaning (Critical Step)\n    Underscore Rules (Strictly Enforce):\n    Inside XML tags (like <appearance>, <clothing>): Must retain Danbooru tag underscores (e.g., long_hair, blue_sky, school_uniform).\n    Natural language (<caption>): Must remove underscores, convert to fluent English sentences (e.g., long hair, blue sky).\n    Special Character Escaping: If Tag contains parentheses (), use backslash escape \\(\\), unless it's ComfyUI weight syntax.\n\n\nStrictly fill the following template (optional tags not used can be omitted):\n\nTemplate Structure:\n```\n{\n<character_1>\n    <n>original_character</n>\n    <gender>...</gender>\n    <appearance>...</appearance>\n    <clothing>...</clothing>\n    <expression>...</expression>\n    <action>...</action>\n    <position>...</position>\n</character_1>\n\n<character_2>\n    <n>...</n>\n    <gender>...</gender>\n    <appearance>...</appearance>\n    <clothing>...</clothing>\n    <action>...</action>\n</character_2>\n\n<character_n>\n    <n>...</n>\n    <gender>...</gender>\n    <appearance>...</appearance>\n    <clothing>...</clothing>\n    <action>...</action>\n</character_n>\n\n<general_tags>\n    <count>...</count>\n    <style>[Current_Style]</style>\n    <artists>[Current_Artists]</artists>\n    <quality>[Current_Quality]</quality>\n    <lighting>[Current_Lighting]</lighting>\n    <background>...</background>\n    <atmosphere>...</atmosphere>\n    <objects>...</objects>\n    <other>...</other>\n    <caption>[Fluent English natural language description based on final content, must remove underscores]</caption>\n</general_tags>\n}\n```\n\nOutput a code block directly containing the complete XML content.\nDo not output any extra dialogue besides the XML code block and the hint below.\n"
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
           }
         ],
         "groups": [
@@ -1897,19 +1897,19 @@
   },
   "config": {},
   "extra": {
-    "ds": {
-      "scale": 0.6603262739902723,
-      "offset": [
-        1727.1671161165966,
-        71.56014663350912
-      ]
-    },
-    "frontendVersion": "1.35.9",
+    "frontendVersion": "1.36.14",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
-    "VHS_KeepIntermediate": true
+    "VHS_KeepIntermediate": true,
+    "ds": {
+      "scale": 0.7263589013892996,
+      "offset": [
+        1462.4064537136917,
+        127.08389358586606
+      ]
+    }
   },
   "version": 0.4
 }
