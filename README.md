@@ -8,9 +8,15 @@ Note that the upscale workflow divides the target `width` and `height` by the `s
 Download the latest [Anima](https://huggingface.co/circlestone-labs/Anima) and put the files in the appropriate directories.\
 Side note: [Qwen3 0.6B Abliterated](https://huggingface.co/ibrahimkettaneh/Qwen3-0.6B-abliterated) works as a text encoder, but I don't know if there's any benefit.
 
-## SAM3 Refine by Segment
+## SAM3 Inpainting
+
+### Anima (Mostly) Native Workflow
+![sam3 inpaint preview](sam3/sam3-inpaint-anima.png)
+Uses native SAM3 node to detect segments. Uses Anima to inpaint, but can be adapted to load any model. Segments are individually upscaled and processed before being downscaled and blended with the original input. This workflow uses as many native nodes as possible, but needs a few utility nodes to loop through multiple masks.
+
+### Deprecated Workflow
 ![netayume preview](sam3/refine-by-segment.png)
-Uses [SAM3](https://huggingface.co/facebook/sam3) to make an img2img mask and uses [Qwen-VL](https://github.com/1038lab/ComfyUI-QwenVL) to automatically generate a prompt describing the masked segment. Set up to use SDXL img2img but can be adapted for any model.
+Uses [SAM3](https://github.com/wouterverweirder/comfyui_sam3) 3rd party node to make an img2img mask and uses [Qwen-VL](https://github.com/1038lab/ComfyUI-QwenVL) to automatically generate a prompt describing the masked segment. Set up to use SDXL img2img but can be adapted for any model.
 
 ## NetaYume Lumina
 
