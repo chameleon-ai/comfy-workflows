@@ -1,8 +1,8 @@
 {
   "id": "f7a250a1-53fb-496b-8c39-c60d9e764028",
   "revision": 0,
-  "last_node_id": 81,
-  "last_link_id": 140,
+  "last_node_id": 85,
+  "last_link_id": 144,
   "nodes": [
     {
       "id": 48,
@@ -31,8 +31,8 @@
       "id": 46,
       "type": "SaveImage",
       "pos": [
-        543.9309775538915,
-        136.55162925648554
+        557.0342360668623,
+        128.68967414870306
       ],
       "size": [
         837.5842143862001,
@@ -212,8 +212,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 6,
-          "lastNodeId": 81,
-          "lastLinkId": 140,
+          "lastNodeId": 85,
+          "lastLinkId": 144,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -959,7 +959,7 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              1065336640300666,
+              990244399116866,
               "randomize",
               15,
               4,
@@ -1012,148 +1012,6 @@
             "widgets_values": [
               1280,
               "fixed"
-            ]
-          },
-          {
-            "id": 70,
-            "type": "ComfyMathExpression",
-            "pos": [
-              112.24078719183996,
-              832.1603490013306
-            ],
-            "size": [
-              210,
-              128
-            ],
-            "flags": {},
-            "order": 17,
-            "mode": 0,
-            "inputs": [
-              {
-                "label": "a",
-                "localized_name": "values.a",
-                "name": "values.a",
-                "type": "FLOAT,INT,BOOLEAN",
-                "link": 131
-              },
-              {
-                "label": "b",
-                "localized_name": "values.b",
-                "name": "values.b",
-                "shape": 7,
-                "type": "FLOAT,INT,BOOLEAN",
-                "link": 123
-              },
-              {
-                "label": "c",
-                "localized_name": "values.c",
-                "name": "values.c",
-                "shape": 7,
-                "type": "FLOAT,INT,BOOLEAN",
-                "link": null
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "FLOAT",
-                "name": "FLOAT",
-                "type": "FLOAT",
-                "links": null
-              },
-              {
-                "localized_name": "INT",
-                "name": "INT",
-                "type": "INT",
-                "links": [
-                  129
-                ]
-              },
-              {
-                "localized_name": "BOOL",
-                "name": "BOOL",
-                "type": "BOOLEAN",
-                "links": null
-              }
-            ],
-            "title": "Calculate Width",
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.21.1",
-              "Node name for S&R": "ComfyMathExpression"
-            },
-            "widgets_values": [
-              "a/b"
-            ]
-          },
-          {
-            "id": 73,
-            "type": "ComfyMathExpression",
-            "pos": [
-              114.83965623696353,
-              1001.9186462625438
-            ],
-            "size": [
-              210,
-              128
-            ],
-            "flags": {},
-            "order": 18,
-            "mode": 0,
-            "inputs": [
-              {
-                "label": "a",
-                "localized_name": "values.a",
-                "name": "values.a",
-                "type": "FLOAT,INT,BOOLEAN",
-                "link": 133
-              },
-              {
-                "label": "b",
-                "localized_name": "values.b",
-                "name": "values.b",
-                "shape": 7,
-                "type": "FLOAT,INT,BOOLEAN",
-                "link": 127
-              },
-              {
-                "label": "c",
-                "localized_name": "values.c",
-                "name": "values.c",
-                "shape": 7,
-                "type": "FLOAT,INT,BOOLEAN",
-                "link": null
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "FLOAT",
-                "name": "FLOAT",
-                "type": "FLOAT",
-                "links": null
-              },
-              {
-                "localized_name": "INT",
-                "name": "INT",
-                "type": "INT",
-                "links": [
-                  130
-                ]
-              },
-              {
-                "localized_name": "BOOL",
-                "name": "BOOL",
-                "type": "BOOLEAN",
-                "links": null
-              }
-            ],
-            "title": "Calculate Height",
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.21.1",
-              "Node name for S&R": "ComfyMathExpression"
-            },
-            "widgets_values": [
-              "a/b"
             ]
           },
           {
@@ -1335,98 +1193,6 @@
             "bgcolor": "#533"
           },
           {
-            "id": 78,
-            "type": "PrimitiveInt",
-            "pos": [
-              664.382705654574,
-              1072.1874041464378
-            ],
-            "size": [
-              270,
-              82
-            ],
-            "flags": {},
-            "order": 22,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "value",
-                "name": "value",
-                "type": "INT",
-                "widget": {
-                  "name": "value"
-                },
-                "link": 138
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "INT",
-                "name": "INT",
-                "type": "INT",
-                "links": [
-                  137
-                ]
-              }
-            ],
-            "title": "Downscaled Steps",
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.21.1",
-              "Node name for S&R": "PrimitiveInt"
-            },
-            "widgets_values": [
-              24,
-              "fixed"
-            ]
-          },
-          {
-            "id": 77,
-            "type": "PrimitiveInt",
-            "pos": [
-              654.5822536755389,
-              1218.035884712247
-            ],
-            "size": [
-              270,
-              82
-            ],
-            "flags": {},
-            "order": 21,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "value",
-                "name": "value",
-                "type": "INT",
-                "widget": {
-                  "name": "value"
-                },
-                "link": 136
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "INT",
-                "name": "INT",
-                "type": "INT",
-                "links": [
-                  135
-                ]
-              }
-            ],
-            "title": "Upscaled Steps",
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.21.1",
-              "Node name for S&R": "PrimitiveInt"
-            },
-            "widgets_values": [
-              15,
-              "fixed"
-            ]
-          },
-          {
             "id": 19,
             "type": "KSampler",
             "pos": [
@@ -1518,7 +1284,7 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              871714130647069,
+              949294592400405,
               "randomize",
               24,
               4,
@@ -1717,8 +1483,242 @@
               "Node name for S&R": "PrimitiveInt"
             },
             "widgets_values": [
-              -385345840509955,
+              723836111166922,
               "randomize"
+            ]
+          },
+          {
+            "id": 78,
+            "type": "PrimitiveInt",
+            "pos": [
+              664.382705654574,
+              1072.1874041464378
+            ],
+            "size": [
+              270,
+              82
+            ],
+            "flags": {},
+            "order": 22,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "value",
+                "name": "value",
+                "type": "INT",
+                "widget": {
+                  "name": "value"
+                },
+                "link": 138
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "INT",
+                "name": "INT",
+                "type": "INT",
+                "links": [
+                  137
+                ]
+              }
+            ],
+            "title": "Downscaled Steps",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.21.1",
+              "Node name for S&R": "PrimitiveInt"
+            },
+            "widgets_values": [
+              24,
+              "fixed"
+            ]
+          },
+          {
+            "id": 77,
+            "type": "PrimitiveInt",
+            "pos": [
+              654.5822536755389,
+              1218.035884712247
+            ],
+            "size": [
+              270,
+              82
+            ],
+            "flags": {},
+            "order": 21,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "value",
+                "name": "value",
+                "type": "INT",
+                "widget": {
+                  "name": "value"
+                },
+                "link": 136
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "INT",
+                "name": "INT",
+                "type": "INT",
+                "links": [
+                  135
+                ]
+              }
+            ],
+            "title": "Upscaled Steps",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.21.1",
+              "Node name for S&R": "PrimitiveInt"
+            },
+            "widgets_values": [
+              15,
+              "fixed"
+            ]
+          },
+          {
+            "id": 70,
+            "type": "ComfyMathExpression",
+            "pos": [
+              112.24078719183996,
+              832.1603490013306
+            ],
+            "size": [
+              210,
+              148
+            ],
+            "flags": {},
+            "order": 17,
+            "mode": 0,
+            "inputs": [
+              {
+                "label": "a",
+                "localized_name": "values.a",
+                "name": "values.a",
+                "type": "FLOAT,INT,BOOLEAN",
+                "link": 131
+              },
+              {
+                "label": "b",
+                "localized_name": "values.b",
+                "name": "values.b",
+                "shape": 7,
+                "type": "FLOAT,INT,BOOLEAN",
+                "link": 123
+              },
+              {
+                "label": "c",
+                "localized_name": "values.c",
+                "name": "values.c",
+                "shape": 7,
+                "type": "FLOAT,INT,BOOLEAN",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "FLOAT",
+                "name": "FLOAT",
+                "type": "FLOAT",
+                "links": null
+              },
+              {
+                "localized_name": "INT",
+                "name": "INT",
+                "type": "INT",
+                "links": [
+                  129
+                ]
+              },
+              {
+                "localized_name": "BOOL",
+                "name": "BOOL",
+                "type": "BOOLEAN",
+                "links": null
+              }
+            ],
+            "title": "Calculate Width",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.21.1",
+              "Node name for S&R": "ComfyMathExpression"
+            },
+            "widgets_values": [
+              "round((a / b) / 8) * 8"
+            ]
+          },
+          {
+            "id": 73,
+            "type": "ComfyMathExpression",
+            "pos": [
+              114.83965623696353,
+              1001.9186462625438
+            ],
+            "size": [
+              210,
+              148
+            ],
+            "flags": {},
+            "order": 18,
+            "mode": 0,
+            "inputs": [
+              {
+                "label": "a",
+                "localized_name": "values.a",
+                "name": "values.a",
+                "type": "FLOAT,INT,BOOLEAN",
+                "link": 133
+              },
+              {
+                "label": "b",
+                "localized_name": "values.b",
+                "name": "values.b",
+                "shape": 7,
+                "type": "FLOAT,INT,BOOLEAN",
+                "link": 127
+              },
+              {
+                "label": "c",
+                "localized_name": "values.c",
+                "name": "values.c",
+                "shape": 7,
+                "type": "FLOAT,INT,BOOLEAN",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "FLOAT",
+                "name": "FLOAT",
+                "type": "FLOAT",
+                "links": null
+              },
+              {
+                "localized_name": "INT",
+                "name": "INT",
+                "type": "INT",
+                "links": [
+                  130
+                ]
+              },
+              {
+                "localized_name": "BOOL",
+                "name": "BOOL",
+                "type": "BOOLEAN",
+                "links": null
+              }
+            ],
+            "title": "Calculate Height",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.21.1",
+              "Node name for S&R": "ComfyMathExpression"
+            },
+            "widgets_values": [
+              "round((a / b) / 8) * 8"
             ]
           }
         ],
@@ -2163,10 +2163,10 @@
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.8394858415646145,
+      "scale": 0.8394858415645758,
       "offset": [
-        267.5240447457843,
-        -36.974262360323735
+        459.5379425855575,
+        -13.717618024138421
       ]
     }
   },
