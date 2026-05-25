@@ -3,7 +3,7 @@ Custom workflows for ComfyUI
 
 ## Anima
 ![netayume preview](anima/anima.png)
-Two workflows, basic and upscale. Anima can handle native high resolution generation but the base model is slow without a turbo lora. The goal of the upscale workflow is to shave off time by doing most of the steps at lower resolution.
+Two workflows, basic and upscale. Anima can handle native high resolution generation but the base model is slow without a turbo lora. The goal of the upscale workflow is to shave off time by doing most of the steps at lower resolution. I've also included "wildcard" versions that add random artist tags to increase variation.\
 Note that the upscale workflow divides the target `width` and `height` by the `scale_by` value, then upscales it by that amount for the final pass. It is recommended, but not required, to use resolution and scale values that divide into whole numbers.\
 Download the latest [Anima](https://huggingface.co/circlestone-labs/Anima) and put the files in the appropriate directories.\
 Side note: [Qwen3 0.6B Abliterated](https://huggingface.co/ibrahimkettaneh/Qwen3-0.6B-abliterated) works as a text encoder, but I don't know if there's any benefit.

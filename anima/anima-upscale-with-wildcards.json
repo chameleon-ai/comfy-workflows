@@ -1,8 +1,8 @@
 {
-  "id": "f7a250a1-53fb-496b-8c39-c60d9e764028",
+  "id": "6319ea6f-fa14-4288-b471-e3deaa2fc51c",
   "revision": 0,
-  "last_node_id": 86,
-  "last_link_id": 146,
+  "last_node_id": 101,
+  "last_link_id": 170,
   "nodes": [
     {
       "id": 48,
@@ -144,6 +144,15 @@
             "name": "steps_1"
           },
           "link": null
+        },
+        {
+          "label": "use_wildcards",
+          "name": "switch",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch"
+          },
+          "link": null
         }
       ],
       "outputs": [
@@ -212,6 +221,10 @@
           [
             "77",
             "value"
+          ],
+          [
+            "100",
+            "switch"
           ]
         ],
         "cnr_id": "comfy-core",
@@ -252,9 +265,9 @@
         "id": "a3c0dab6-b250-4585-a0f9-8fb8b074fb2f",
         "version": 1,
         "state": {
-          "lastGroupId": 6,
-          "lastNodeId": 86,
-          "lastLinkId": 146,
+          "lastGroupId": 11,
+          "lastNodeId": 101,
+          "lastLinkId": 170,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -266,7 +279,7 @@
             -330,
             530,
             152.81666564941406,
-            288
+            308
           ]
         },
         "outputNode": {
@@ -429,6 +442,19 @@
               -201.18333435058594,
               774
             ]
+          },
+          {
+            "id": "c16ec2b4-aa59-4fef-9a21-1c311fe5dd17",
+            "name": "switch",
+            "type": "BOOLEAN",
+            "linkIds": [
+              167
+            ],
+            "label": "use_wildcards",
+            "pos": [
+              -201.18333435058594,
+              794
+            ]
           }
         ],
         "outputs": [
@@ -473,7 +499,7 @@
               150
             ],
             "flags": {},
-            "order": 10,
+            "order": 12,
             "mode": 0,
             "inputs": [
               {
@@ -523,64 +549,6 @@
             ]
           },
           {
-            "id": 61,
-            "type": "StringConcatenate",
-            "pos": [
-              640.8500662926386,
-              151.3055158842331
-            ],
-            "size": [
-              210,
-              166
-            ],
-            "flags": {},
-            "order": 11,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "string_a",
-                "name": "string_a",
-                "type": "STRING",
-                "widget": {
-                  "name": "string_a"
-                },
-                "link": 105
-              },
-              {
-                "localized_name": "string_b",
-                "name": "string_b",
-                "type": "STRING",
-                "widget": {
-                  "name": "string_b"
-                },
-                "link": 104
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "STRING",
-                "name": "STRING",
-                "type": "STRING",
-                "links": [
-                  106
-                ]
-              }
-            ],
-            "title": "Positive Prompt",
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.21.1",
-              "Node name for S&R": "StringConcatenate"
-            },
-            "widgets_values": [
-              "",
-              "Nagato Yuki\nYuki has light purple hair and light brown eyes and glasses. She is wearing a light blue school uniform with a brown cardigan with a red scarf. She has a short blue pleated skirt. She is standing outdoors at night. She is looking up toward the sky. It is snowing and the background is a residential Japanese neighborhood. The background is blurred by depth-of-field.\nexpressionless\n(@haruhisky:0.8), (@piromizu:0.5), (@rahime:0.5) ",
-              ", "
-            ],
-            "color": "#232",
-            "bgcolor": "#353"
-          },
-          {
             "id": 64,
             "type": "StringConcatenate",
             "pos": [
@@ -592,7 +560,7 @@
               166
             ],
             "flags": {},
-            "order": 12,
+            "order": 14,
             "mode": 0,
             "inputs": [
               {
@@ -632,7 +600,7 @@
             },
             "widgets_values": [
               "",
-              "white background, character card, manga panel, blank background\n",
+              "white background, character card, manga panel, blank background, nude, nsfw\n",
               ", "
             ],
             "color": "#322",
@@ -650,7 +618,7 @@
               130
             ],
             "flags": {},
-            "order": 9,
+            "order": 11,
             "mode": 0,
             "inputs": [
               {
@@ -699,79 +667,18 @@
             ]
           },
           {
-            "id": 11,
-            "type": "CLIPTextEncode",
-            "pos": [
-              640.9540060670921,
-              358.3567180171199
-            ],
-            "size": [
-              304.2985316708915,
-              88
-            ],
-            "flags": {},
-            "order": 4,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "clip",
-                "name": "clip",
-                "type": "CLIP",
-                "link": 80
-              },
-              {
-                "localized_name": "text",
-                "name": "text",
-                "type": "STRING",
-                "widget": {
-                  "name": "text"
-                },
-                "link": 106
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "CONDITIONING",
-                "name": "CONDITIONING",
-                "type": "CONDITIONING",
-                "links": [
-                  39,
-                  115
-                ]
-              }
-            ],
-            "title": "CLIP Text Encode (Positive Prompt)",
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.3.65",
-              "Node name for S&R": "CLIPTextEncode",
-              "enableTabs": false,
-              "tabWidth": 65,
-              "tabXOffset": 10,
-              "hasSecondTab": false,
-              "secondTabText": "Send Back",
-              "secondTabOffset": 80,
-              "secondTabWidth": 65
-            },
-            "widgets_values": [
-              "masterpiece, best quality, score_7, safe, anime, a close-up of a futuristic cyberpunk robotic eye, original close-up eye composition strictly preserved, encased in weathered metallic blue and chrome plating with exposed wiring, glowing orange indicator lights, hydraulic pistons, and panel seams wrapping around the eyelid, a chrome mechanical tear duct with fine circuit details, long dark anime-style eyelashes framing the eye, soft pink sclera. The dark pupil holds a complete, glowing Earth with blue atmosphere and white clouds as a reflection, while the surrounding iris reflects a vivid cosmic scene: a fiery red shooting star, wispy cyan nebula clouds, and tiny glowing star specks. No change to the original close-up eye framing, no additional elements outside the eye structure, neon accent lighting, high contrast cyberpunk color palette, intricate mechanical engineering, sharp line art, gritty futuristic sci-fi atmosphere."
-            ],
-            "color": "#232",
-            "bgcolor": "#353"
-          },
-          {
             "id": 67,
             "type": "LatentUpscaleBy",
             "pos": [
-              1388.7777146956576,
-              247.42459032661503
+              1991.179508443461,
+              261.16678338767787
             ],
             "size": [
               270,
               82
             ],
             "flags": {},
-            "order": 13,
+            "order": 15,
             "mode": 0,
             "inputs": [
               {
@@ -822,7 +729,7 @@
               100
             ],
             "flags": {},
-            "order": 6,
+            "order": 8,
             "mode": 0,
             "inputs": [
               {
@@ -873,15 +780,15 @@
             "id": 69,
             "type": "VAEDecode",
             "pos": [
-              2009.789484994964,
-              198.1148147877002
+              2612.1912787427677,
+              211.85700784876303
             ],
             "size": [
               230,
               90
             ],
             "flags": {},
-            "order": 15,
+            "order": 17,
             "mode": 0,
             "inputs": [
               {
@@ -926,15 +833,15 @@
             "id": 68,
             "type": "KSampler",
             "pos": [
-              1685.7816381287587,
-              192.15878819089556
+              2288.1834318765655,
+              205.9009812519584
             ],
             "size": [
               300,
               620
             ],
             "flags": {},
-            "order": 14,
+            "order": 16,
             "mode": 0,
             "inputs": [
               {
@@ -1013,7 +920,7 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              178613838520926,
+              389648067412718,
               "randomize",
               15,
               4,
@@ -1034,7 +941,7 @@
               82
             ],
             "flags": {},
-            "order": 18,
+            "order": 20,
             "mode": 0,
             "inputs": [
               {
@@ -1080,7 +987,7 @@
               150
             ],
             "flags": {},
-            "order": 8,
+            "order": 10,
             "mode": 0,
             "inputs": [
               {
@@ -1136,7 +1043,7 @@
             "widgets_values": [
               1280,
               1920,
-              1
+              4
             ]
           },
           {
@@ -1151,7 +1058,7 @@
               82
             ],
             "flags": {},
-            "order": 19,
+            "order": 21,
             "mode": 0,
             "inputs": [
               {
@@ -1197,7 +1104,7 @@
               140
             ],
             "flags": {},
-            "order": 5,
+            "order": 7,
             "mode": 0,
             "inputs": [
               {
@@ -1250,15 +1157,15 @@
             "id": 19,
             "type": "KSampler",
             "pos": [
-              991.7848472503796,
-              170.92237721797068
+              1582.2246041071264,
+              179.05785496044464
             ],
             "size": [
               300,
               620
             ],
             "flags": {},
-            "order": 7,
+            "order": 9,
             "mode": 0,
             "inputs": [
               {
@@ -1338,7 +1245,7 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              125193509809995,
+              767146568452584,
               "randomize",
               24,
               4,
@@ -1454,7 +1361,7 @@
               "Node name for S&R": "PrimitiveInt"
             },
             "widgets_values": [
-              564427630020645,
+              -251571588439401,
               "randomize"
             ]
           },
@@ -1470,7 +1377,7 @@
               82
             ],
             "flags": {},
-            "order": 21,
+            "order": 23,
             "mode": 0,
             "inputs": [
               {
@@ -1516,7 +1423,7 @@
               82
             ],
             "flags": {},
-            "order": 20,
+            "order": 22,
             "mode": 0,
             "inputs": [
               {
@@ -1562,7 +1469,7 @@
               148
             ],
             "flags": {},
-            "order": 16,
+            "order": 18,
             "mode": 0,
             "inputs": [
               {
@@ -1633,7 +1540,7 @@
               148
             ],
             "flags": {},
-            "order": 17,
+            "order": 19,
             "mode": 0,
             "inputs": [
               {
@@ -1696,15 +1603,15 @@
             "id": 8,
             "type": "VAEDecode",
             "pos": [
-              999.1909150131457,
-              843.7299852233011
+              1589.6306718698927,
+              851.8654629657752
             ],
             "size": [
               230,
               90
             ],
             "flags": {},
-            "order": 3,
+            "order": 5,
             "mode": 0,
             "inputs": [
               {
@@ -1744,6 +1651,335 @@
               "secondTabWidth": 65
             },
             "widgets_values": []
+          },
+          {
+            "id": 99,
+            "type": "StringConcatenate",
+            "pos": [
+              995.1495483971418,
+              304.83709350235813
+            ],
+            "size": [
+              210,
+              166
+            ],
+            "flags": {},
+            "order": 24,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_a",
+                "name": "string_a",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_a"
+                },
+                "link": 168
+              },
+              {
+                "localized_name": "string_b",
+                "name": "string_b",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_b"
+                },
+                "link": 164
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  165
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.10.0",
+              "Node name for S&R": "StringConcatenate"
+            },
+            "widgets_values": [
+              "",
+              "",
+              ""
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+          },
+          {
+            "id": 98,
+            "type": "9701eaef-1330-44b8-a146-45a4c2e18f08",
+            "pos": [
+              987.8528794843697,
+              152.1561914351818
+            ],
+            "size": [
+              210,
+              112
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "label": "Prompt",
+                "name": "string_a",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_a"
+                },
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  164
+                ]
+              }
+            ],
+            "properties": {
+              "proxyWidgets": [
+                [
+                  "89",
+                  "string_a"
+                ]
+              ],
+              "cnr_id": "comfy-core",
+              "ver": "0.7.0"
+            },
+            "widgets_values": [],
+            "color": "#232",
+            "bgcolor": "#353"
+          },
+          {
+            "id": 11,
+            "type": "CLIPTextEncode",
+            "pos": [
+              1249.7931779940143,
+              196.2257107687794
+            ],
+            "size": [
+              304.2985316708915,
+              88
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 80
+              },
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "widget": {
+                  "name": "text"
+                },
+                "link": 169
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "CONDITIONING",
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "links": [
+                  39,
+                  115
+                ]
+              }
+            ],
+            "title": "CLIP Text Encode (Positive Prompt)",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.65",
+              "Node name for S&R": "CLIPTextEncode",
+              "enableTabs": false,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "hasSecondTab": false,
+              "secondTabText": "Send Back",
+              "secondTabOffset": 80,
+              "secondTabWidth": 65
+            },
+            "widgets_values": [
+              "masterpiece, best quality, score_7, safe, anime, a close-up of a futuristic cyberpunk robotic eye, original close-up eye composition strictly preserved, encased in weathered metallic blue and chrome plating with exposed wiring, glowing orange indicator lights, hydraulic pistons, and panel seams wrapping around the eyelid, a chrome mechanical tear duct with fine circuit details, long dark anime-style eyelashes framing the eye, soft pink sclera. The dark pupil holds a complete, glowing Earth with blue atmosphere and white clouds as a reflection, while the surrounding iris reflects a vivid cosmic scene: a fiery red shooting star, wispy cyan nebula clouds, and tiny glowing star specks. No change to the original close-up eye framing, no additional elements outside the eye structure, neon accent lighting, high contrast cyberpunk color palette, intricate mechanical engineering, sharp line art, gritty futuristic sci-fi atmosphere."
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+          },
+          {
+            "id": 61,
+            "type": "StringConcatenate",
+            "pos": [
+              640.8500662926386,
+              151.3055158842331
+            ],
+            "size": [
+              296.8006378276357,
+              290.0009111823367
+            ],
+            "flags": {},
+            "order": 13,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_a",
+                "name": "string_a",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_a"
+                },
+                "link": 105
+              },
+              {
+                "localized_name": "string_b",
+                "name": "string_b",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_b"
+                },
+                "link": 104
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  166,
+                  168
+                ]
+              }
+            ],
+            "title": "Positive Prompt",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.21.1",
+              "Node name for S&R": "StringConcatenate"
+            },
+            "widgets_values": [
+              "",
+              "A woman is standing by a lake at twilight. She is barefoot and wearing a celestrial robe and holding a staff with a glowing purple crystal emitting a soft light. She has red hair and aqua eyes. She is looking off into the distance. \nNext to the woman is a stone golem with glowing purple eyes. The stone golem is rough and rocky and seated on the ground near the woman. The ground surrounding the golem is a magic circle and glowing purple runes.\nfantasy, magic, scenery\nThe setting is a beautiful lake at the foot of a mountain. Dim stars can be seen as the sun sets, casting golden twilight on the mountain peaks. The distant background is blurred by depth of feild.",
+              ", "
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+          },
+          {
+            "id": 100,
+            "type": "ComfySwitchNode",
+            "pos": [
+              997.5453483971437,
+              529.8701603479583
+            ],
+            "size": [
+              210,
+              78
+            ],
+            "flags": {},
+            "order": 25,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "on_false",
+                "name": "on_false",
+                "type": "STRING",
+                "link": 166
+              },
+              {
+                "localized_name": "on_true",
+                "name": "on_true",
+                "type": "STRING",
+                "link": 165
+              },
+              {
+                "localized_name": "switch",
+                "name": "switch",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "switch"
+                },
+                "link": 167
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "output",
+                "name": "output",
+                "type": "STRING",
+                "links": [
+                  169,
+                  170
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.10.0",
+              "Node name for S&R": "ComfySwitchNode"
+            },
+            "widgets_values": [
+              true
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+          },
+          {
+            "id": 101,
+            "type": "PreviewAny",
+            "pos": [
+              995.9070013286603,
+              661.1525124789558
+            ],
+            "size": [
+              218.3356168072571,
+              579.4465936399515
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "source",
+                "name": "source",
+                "type": "*",
+                "link": 170
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.22.0",
+              "Node name for S&R": "PreviewAny"
+            },
+            "widgets_values": [
+              null,
+              null,
+              null
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
           }
         ],
         "groups": [
@@ -1787,8 +2023,8 @@
             "id": 4,
             "title": "Upscale",
             "bounding": [
-              1362.9649965819167,
-              86.1415147677626,
+              1965.3667903297205,
+              99.88370782882525,
               909.5186363072326,
               738.7365416066561
             ],
@@ -1811,12 +2047,24 @@
             "id": 6,
             "title": "Base Gen",
             "bounding": [
-              975.690705041646,
-              84.38725972505813,
+              1566.130461898393,
+              92.5227374675322,
               370.21376946609735,
               1183.9796672124226
             ],
             "color": "#88A",
+            "flags": {}
+          },
+          {
+            "id": 11,
+            "title": "Optional Wildcards",
+            "bounding": [
+              976.5155483971445,
+              77.19706034795733,
+              258.5921000000003,
+              1192.8766474358931
+            ],
+            "color": "#3f789e",
             "flags": {}
           }
         ],
@@ -1931,14 +2179,6 @@
             "origin_slot": 0,
             "target_id": 61,
             "target_slot": 0,
-            "type": "STRING"
-          },
-          {
-            "id": 106,
-            "origin_id": 61,
-            "origin_slot": 0,
-            "target_id": 11,
-            "target_slot": 1,
             "type": "STRING"
           },
           {
@@ -2172,9 +2412,639 @@
             "target_id": -20,
             "target_slot": 1,
             "type": "IMAGE"
+          },
+          {
+            "id": 164,
+            "origin_id": 98,
+            "origin_slot": 0,
+            "target_id": 99,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 165,
+            "origin_id": 99,
+            "origin_slot": 0,
+            "target_id": 100,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 166,
+            "origin_id": 61,
+            "origin_slot": 0,
+            "target_id": 100,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 167,
+            "origin_id": -10,
+            "origin_slot": 12,
+            "target_id": 100,
+            "target_slot": 2,
+            "type": "BOOLEAN"
+          },
+          {
+            "id": 168,
+            "origin_id": 61,
+            "origin_slot": 0,
+            "target_id": 99,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 169,
+            "origin_id": 100,
+            "origin_slot": 0,
+            "target_id": 11,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 170,
+            "origin_id": 100,
+            "origin_slot": 0,
+            "target_id": 101,
+            "target_slot": 0,
+            "type": "STRING"
           }
         ],
         "extra": {}
+      },
+      {
+        "id": "9701eaef-1330-44b8-a146-45a4c2e18f08",
+        "version": 1,
+        "state": {
+          "lastGroupId": 11,
+          "lastNodeId": 101,
+          "lastLinkId": 170,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Add Artist Wildcards",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -1630.8433263777063,
+            1011.1877002283318,
+            128,
+            68
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            4.949493152261277,
+            1344.973210974057,
+            128,
+            68
+          ]
+        },
+        "inputs": [
+          {
+            "id": "b2dd2d88-9092-469b-8b54-24a17bbbd0af",
+            "name": "string_a",
+            "type": "STRING",
+            "linkIds": [
+              155
+            ],
+            "label": "Prompt",
+            "pos": [
+              -1526.8433263777063,
+              1035.1877002283318
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "8d581c55-6c82-4d2b-a190-b72c800540bd",
+            "name": "STRING",
+            "type": "STRING",
+            "linkIds": [
+              147
+            ],
+            "pos": [
+              28.949493152261276,
+              1368.973210974057
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 87,
+            "type": "Stable Wildcards",
+            "pos": [
+              -1436.4645231119991,
+              1089.1777428751407
+            ],
+            "size": [
+              210,
+              160
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 157
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "Prompt String",
+                "name": "Prompt String",
+                "type": "STRING",
+                "links": [
+                  145
+                ]
+              }
+            ],
+            "title": "Generate Artist",
+            "properties": {
+              "cnr_id": "comfyui-stable-wildcards",
+              "ver": "1.1.3",
+              "Node name for S&R": "Stable Wildcards"
+            },
+            "widgets_values": [
+              "",
+              311302531905734,
+              "randomize",
+              1
+            ]
+          },
+          {
+            "id": 91,
+            "type": "Stable Wildcards",
+            "pos": [
+              -1438.0951134917216,
+              1308.5532293106592
+            ],
+            "size": [
+              210,
+              160
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 158
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "Prompt String",
+                "name": "Prompt String",
+                "type": "STRING",
+                "links": [
+                  152
+                ]
+              }
+            ],
+            "title": "Generate Artist",
+            "properties": {
+              "cnr_id": "comfyui-stable-wildcards",
+              "ver": "1.1.3",
+              "Node name for S&R": "Stable Wildcards"
+            },
+            "widgets_values": [
+              "",
+              172218302107943,
+              "randomize",
+              1
+            ]
+          },
+          {
+            "id": 92,
+            "type": "Stable Wildcards",
+            "pos": [
+              -1437.208877884376,
+              1528.4156978986243
+            ],
+            "size": [
+              210,
+              160
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 159
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "Prompt String",
+                "name": "Prompt String",
+                "type": "STRING",
+                "links": [
+                  154
+                ]
+              }
+            ],
+            "title": "Generate Artist",
+            "properties": {
+              "cnr_id": "comfyui-stable-wildcards",
+              "ver": "1.1.3",
+              "Node name for S&R": "Stable Wildcards"
+            },
+            "widgets_values": [
+              "",
+              239985795573481,
+              "randomize",
+              1
+            ]
+          },
+          {
+            "id": 88,
+            "type": "StringConcatenate",
+            "pos": [
+              -1196.3697034994213,
+              994.9589503423215
+            ],
+            "size": [
+              210,
+              190.4654587698185
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_b",
+                "name": "string_b",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_b"
+                },
+                "link": 145
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  151
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.7.0",
+              "Node name for S&R": "StringConcatenate"
+            },
+            "widgets_values": [
+              "\nArtists: ",
+              "",
+              ""
+            ]
+          },
+          {
+            "id": 93,
+            "type": "StringConcatenate",
+            "pos": [
+              -956.2831619628193,
+              1213.5333024100871
+            ],
+            "size": [
+              210,
+              190.4654587698185
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_a",
+                "name": "string_a",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_a"
+                },
+                "link": 151
+              },
+              {
+                "localized_name": "string_b",
+                "name": "string_b",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_b"
+                },
+                "link": 152
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  153
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.7.0",
+              "Node name for S&R": "StringConcatenate"
+            },
+            "widgets_values": [
+              "",
+              "",
+              ", "
+            ]
+          },
+          {
+            "id": 89,
+            "type": "StringConcatenate",
+            "pos": [
+              -448.1333069639064,
+              1351.919929318748
+            ],
+            "size": [
+              400,
+              200
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_a",
+                "name": "string_a",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_a"
+                },
+                "link": 155
+              },
+              {
+                "localized_name": "string_b",
+                "name": "string_b",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_b"
+                },
+                "link": 163
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  147
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.7.0",
+              "Node name for S&R": "StringConcatenate"
+            },
+            "widgets_values": [
+              "",
+              "",
+              ""
+            ]
+          },
+          {
+            "id": 94,
+            "type": "StringConcatenate",
+            "pos": [
+              -703.4986375976302,
+              1452.7311055222692
+            ],
+            "size": [
+              210,
+              190.4654587698185
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_a",
+                "name": "string_a",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_a"
+                },
+                "link": 153
+              },
+              {
+                "localized_name": "string_b",
+                "name": "string_b",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_b"
+                },
+                "link": 154
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  163
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.7.0",
+              "Node name for S&R": "StringConcatenate"
+            },
+            "widgets_values": [
+              "",
+              "",
+              ", "
+            ]
+          },
+          {
+            "id": 95,
+            "type": "PrimitiveStringMultiline",
+            "pos": [
+              -1974.5721653462099,
+              1132.0129748920353
+            ],
+            "size": [
+              400,
+              200
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  157,
+                  158,
+                  159
+                ]
+              }
+            ],
+            "title": "Artist Wildcard",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.7.0",
+              "Node name for S&R": "PrimitiveStringMultiline"
+            },
+            "widgets_values": [
+              "{@ebifurya|@greatm8|@ebora|@gweda|@takeuchi_takashi|@agawa_ryou|@hinghoi|@fuuzasa|@butcha-u|@tf_cafe|@huke|@ergot|@erere|@fuzichoco|@yuuki_hagure|@nonco|@porforever|@allurmilk|@norasuko|@kimoshi|@pochincoff|@koku|@eretto|@haoro|@9law|@echj|@mefomefo|@starraisins|@zen33n|@infukun|@kuena|@yuzuna99|@krekkov|@betabeet|@blvefo9|@syroh|@lunacle|@bellhenge|@zasshu|@babalilo|@zerocat|@redlhzz|@chiwino|@ssalbulre|@qys3|@nabezoko|@beni_shake|@hews|@mizumizuni|@sachito|@gabiran|@coro_fae|@nikoo|@amano_don|@zunkome|@ironlily|@haruhisky|@retsumaru|@yopparai_oni|@nishiya_futoshi|@alex_ahad|@utsusumi_kio|@tonpuu|@eko|@tukino_neru|@henshako}"
+            ]
+          }
+        ],
+        "groups": [
+          {
+            "id": 1,
+            "title": "Artist Wildcards",
+            "bounding": [
+              -1999.1181916609557,
+              895.1598021460027,
+              1514.3206910949139,
+              812.5864754210033
+            ],
+            "color": "#3f789e",
+            "flags": {}
+          },
+          {
+            "id": 2,
+            "title": "Add to prompt",
+            "bounding": [
+              -458.2324772249116,
+              1277.603391923042,
+              432.7461702961884,
+              342.46208371382374
+            ],
+            "color": "#b58b2a",
+            "flags": {}
+          }
+        ],
+        "links": [
+          {
+            "id": 145,
+            "origin_id": 87,
+            "origin_slot": 0,
+            "target_id": 88,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 147,
+            "origin_id": 89,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 151,
+            "origin_id": 88,
+            "origin_slot": 0,
+            "target_id": 93,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 152,
+            "origin_id": 91,
+            "origin_slot": 0,
+            "target_id": 93,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 153,
+            "origin_id": 93,
+            "origin_slot": 0,
+            "target_id": 94,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 154,
+            "origin_id": 92,
+            "origin_slot": 0,
+            "target_id": 94,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 155,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 89,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 157,
+            "origin_id": 95,
+            "origin_slot": 0,
+            "target_id": 87,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 158,
+            "origin_id": 95,
+            "origin_slot": 0,
+            "target_id": 91,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 159,
+            "origin_id": 95,
+            "origin_slot": 0,
+            "target_id": 92,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 163,
+            "origin_id": 94,
+            "origin_slot": 0,
+            "target_id": 89,
+            "target_slot": 1,
+            "type": "STRING"
+          }
+        ],
+        "extra": {
+          "workflowRendererVersion": "LG"
+        }
       }
     ]
   },
@@ -2187,10 +3057,10 @@
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.7258011182487525,
+      "scale": 0.9238152733995676,
       "offset": [
-        559.2169477244339,
-        78.82735613278895
+        288.9983102015793,
+        50.22398638554133
       ]
     }
   },

@@ -1,8 +1,8 @@
 {
-  "id": "ae90a6d1-e7a4-4cd4-8e0e-727ee9ae7fa3",
+  "id": "32ac7416-63c4-4d35-9ff3-70091205e1bc",
   "revision": 0,
-  "last_node_id": 333,
-  "last_link_id": 678,
+  "last_node_id": 335,
+  "last_link_id": 685,
   "nodes": [
     {
       "id": 292,
@@ -27,6 +27,66 @@
       ],
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 333,
+      "type": "SaveImage",
+      "pos": [
+        415.1472652151178,
+        401.33700789573174
+      ],
+      "size": [
+        897.7195970491142,
+        729.410138491107
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 678
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.21.1"
+      },
+      "widgets_values": [
+        "Anima-Sam3"
+      ]
+    },
+    {
+      "id": 334,
+      "type": "PreviewImage",
+      "pos": [
+        846.1999345873855,
+        1176.2636023026866
+      ],
+      "size": [
+        681.4998573721696,
+        498.1481398615347
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 684
+        }
+      ],
+      "outputs": [],
+      "title": "After Inpaint Preview",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.22.0",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
     },
     {
       "id": 290,
@@ -63,7 +123,7 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "Anima_00153_.png",
+        "Anima_01186_.png",
         "image"
       ]
     },
@@ -132,6 +192,22 @@
           "links": [
             678
           ]
+        },
+        {
+          "label": "preview_cropped",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            683
+          ]
+        },
+        {
+          "label": "preview_after_inpaint",
+          "name": "IMAGE_1",
+          "type": "IMAGE",
+          "links": [
+            684
+          ]
         }
       ],
       "properties": {
@@ -169,15 +245,11 @@
             "border_blending"
           ],
           [
-            "303",
-            "$$canvas-image-preview"
+            "325",
+            "individual_masks"
           ],
           [
             "318",
-            "$$canvas-image-preview"
-          ],
-          [
-            "321",
             "$$canvas-image-preview"
           ]
         ],
@@ -189,34 +261,34 @@
       "bgcolor": "#353"
     },
     {
-      "id": 333,
-      "type": "SaveImage",
+      "id": 335,
+      "type": "PreviewImage",
       "pos": [
-        415.1472652151178,
-        401.33700789573174
+        437.2248589975509,
+        1188.417413332789
       ],
       "size": [
-        573.8927821203738,
-        792.8441843514215
+        357.571513406009,
+        301.20635139435603
       ],
       "flags": {},
-      "order": 3,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 678
+          "link": 683
         }
       ],
       "outputs": [],
+      "title": "Selection Preview",
       "properties": {
         "cnr_id": "comfy-core",
-        "ver": "0.21.1"
+        "ver": "0.22.0",
+        "Node name for S&R": "PreviewImage"
       },
-      "widgets_values": [
-        "Anima-Sam3"
-      ]
+      "widgets_values": []
     }
   ],
   "links": [
@@ -235,6 +307,22 @@
       333,
       0,
       "IMAGE"
+    ],
+    [
+      683,
+      322,
+      1,
+      335,
+      0,
+      "IMAGE"
+    ],
+    [
+      684,
+      322,
+      2,
+      334,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [],
@@ -245,8 +333,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 15,
-          "lastNodeId": 333,
-          "lastLinkId": 678,
+          "lastNodeId": 335,
+          "lastLinkId": 685,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -258,16 +346,16 @@
             -527.4483768463134,
             677.8478140726412,
             180.25,
-            228
+            248
           ]
         },
         "outputNode": {
           "id": -20,
           "bounding": [
-            3946.4580144122456,
-            673.7269231564751,
-            128,
-            68
+            3947.9954573382342,
+            672.9582016934813,
+            168.23332977294922,
+            108
           ]
         },
         "inputs": [
@@ -385,6 +473,18 @@
               -371.1983768463134,
               861.8478140726412
             ]
+          },
+          {
+            "id": "9d541b5a-ccad-45da-a1d9-d977bd132dd9",
+            "name": "individual_masks",
+            "type": "BOOLEAN",
+            "linkIds": [
+              685
+            ],
+            "pos": [
+              -371.1983768463134,
+              881.8478140726412
+            ]
           }
         ],
         "outputs": [
@@ -397,8 +497,34 @@
             ],
             "localized_name": "final_image",
             "pos": [
-              3970.4580144122456,
-              697.7269231564751
+              3971.9954573382342,
+              696.9582016934813
+            ]
+          },
+          {
+            "id": "28dab744-4230-447a-a010-c9bdc877fb74",
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "linkIds": [
+              682
+            ],
+            "label": "preview_cropped",
+            "pos": [
+              3971.9954573382342,
+              716.9582016934813
+            ]
+          },
+          {
+            "id": "3bd9e2ec-2150-472e-bc1c-70d34af88b06",
+            "name": "IMAGE_1",
+            "type": "IMAGE",
+            "linkIds": [
+              681
+            ],
+            "label": "preview_after_inpaint",
+            "pos": [
+              3971.9954573382342,
+              736.9582016934813
             ]
           }
         ],
@@ -448,7 +574,7 @@
                 "links": []
               },
               {
-                "label": "4 count",
+                "label": "1 count",
                 "localized_name": "count",
                 "name": "count",
                 "type": "INT",
@@ -619,116 +745,6 @@
             ]
           },
           {
-            "id": 300,
-            "type": "BatchCropFromMaskAdvanced",
-            "pos": [
-              382.62508740770477,
-              664.9788114192429
-            ],
-            "size": [
-              335.73333740234375,
-              242
-            ],
-            "flags": {},
-            "order": 11,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "original_images",
-                "name": "original_images",
-                "type": "IMAGE",
-                "link": 601
-              },
-              {
-                "localized_name": "masks",
-                "name": "masks",
-                "type": "MASK",
-                "link": 643
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "original_images",
-                "name": "original_images",
-                "type": "IMAGE",
-                "links": [
-                  630
-                ]
-              },
-              {
-                "localized_name": "cropped_images",
-                "name": "cropped_images",
-                "type": "IMAGE",
-                "links": []
-              },
-              {
-                "localized_name": "cropped_masks",
-                "name": "cropped_masks",
-                "type": "MASK",
-                "links": [
-                  632
-                ]
-              },
-              {
-                "localized_name": "combined_crop_image",
-                "name": "combined_crop_image",
-                "type": "IMAGE",
-                "links": [
-                  602,
-                  603,
-                  611
-                ]
-              },
-              {
-                "localized_name": "combined_crop_masks",
-                "name": "combined_crop_masks",
-                "type": "MASK",
-                "links": [
-                  604,
-                  613,
-                  633
-                ]
-              },
-              {
-                "localized_name": "bboxes",
-                "name": "bboxes",
-                "type": "BBOX",
-                "links": [
-                  634
-                ]
-              },
-              {
-                "localized_name": "combined_bounding_box",
-                "name": "combined_bounding_box",
-                "type": "BBOX",
-                "links": [
-                  635
-                ]
-              },
-              {
-                "localized_name": "bbox_width",
-                "name": "bbox_width",
-                "type": "INT",
-                "links": []
-              },
-              {
-                "localized_name": "bbox_height",
-                "name": "bbox_height",
-                "type": "INT",
-                "links": []
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfyui-kjnodes",
-              "ver": "1.2.0",
-              "Node name for S&R": "BatchCropFromMaskAdvanced"
-            },
-            "widgets_values": [
-              1,
-              0.7
-            ]
-          },
-          {
             "id": 302,
             "type": "GetImageSize",
             "pos": [
@@ -795,7 +811,7 @@
               194.5
             ],
             "flags": {},
-            "order": 17,
+            "order": 16,
             "mode": 0,
             "inputs": [
               {
@@ -874,7 +890,7 @@
               194.5
             ],
             "flags": {},
-            "order": 18,
+            "order": 17,
             "mode": 0,
             "inputs": [
               {
@@ -953,7 +969,7 @@
               82
             ],
             "flags": {},
-            "order": 19,
+            "order": 18,
             "mode": 0,
             "inputs": [
               {
@@ -1004,7 +1020,7 @@
               194
             ],
             "flags": {},
-            "order": 20,
+            "order": 19,
             "mode": 0,
             "inputs": [
               {
@@ -1114,7 +1130,7 @@
               74.0522492602613
             ],
             "flags": {},
-            "order": 23,
+            "order": 22,
             "mode": 0,
             "inputs": [
               {
@@ -1160,7 +1176,7 @@
               355.52444631765525
             ],
             "flags": {},
-            "order": 24,
+            "order": 23,
             "mode": 0,
             "inputs": [
               {
@@ -1190,7 +1206,7 @@
               159.02858278497422
             ],
             "flags": {},
-            "order": 26,
+            "order": 25,
             "mode": 0,
             "inputs": [
               {
@@ -1243,36 +1259,6 @@
             "widgets_values": []
           },
           {
-            "id": 321,
-            "type": "PreviewImage",
-            "pos": [
-              3479.022352284306,
-              889.3434554807075
-            ],
-            "size": [
-              397.72999999999956,
-              376.46000000000015
-            ],
-            "flags": {},
-            "order": 27,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "images",
-                "name": "images",
-                "type": "IMAGE",
-                "link": 640
-              }
-            ],
-            "outputs": [],
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.21.1",
-              "Node name for S&R": "PreviewImage"
-            },
-            "widgets_values": []
-          },
-          {
             "id": 316,
             "type": "KSampler",
             "pos": [
@@ -1284,7 +1270,7 @@
               620
             ],
             "flags": {},
-            "order": 22,
+            "order": 21,
             "mode": 0,
             "inputs": [
               {
@@ -1354,13 +1340,13 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              684325904506046,
+              124437343127335,
               "randomize",
               30,
               4,
               "er_sde",
               "simple",
-              0.5
+              0.6
             ]
           },
           {
@@ -1437,7 +1423,7 @@
               88
             ],
             "flags": {},
-            "order": 28,
+            "order": 26,
             "mode": 0,
             "inputs": [
               {
@@ -1479,143 +1465,8 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              "face, hand, feet:2"
+              "boots"
             ]
-          },
-          {
-            "id": 325,
-            "type": "SAM3_Detect",
-            "pos": [
-              59.24236168023204,
-              415.39603299762416
-            ],
-            "size": [
-              270,
-              260
-            ],
-            "flags": {},
-            "order": 29,
-            "mode": 0,
-            "inputs": [
-              {
-                "label": "model",
-                "localized_name": "model",
-                "name": "model",
-                "type": "MODEL",
-                "link": 657
-              },
-              {
-                "label": "image",
-                "localized_name": "image",
-                "name": "image",
-                "type": "IMAGE",
-                "link": 663
-              },
-              {
-                "label": "conditioning",
-                "localized_name": "conditioning",
-                "name": "conditioning",
-                "shape": 7,
-                "type": "CONDITIONING",
-                "link": 658
-              },
-              {
-                "label": "bboxes",
-                "localized_name": "bboxes",
-                "name": "bboxes",
-                "shape": 7,
-                "type": "BOUNDING_BOX",
-                "link": null
-              },
-              {
-                "label": "positive_coords",
-                "localized_name": "positive_coords",
-                "name": "positive_coords",
-                "shape": 7,
-                "type": "STRING",
-                "link": null
-              },
-              {
-                "label": "negative_coords",
-                "localized_name": "negative_coords",
-                "name": "negative_coords",
-                "shape": 7,
-                "type": "STRING",
-                "link": null
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "masks",
-                "name": "masks",
-                "type": "MASK",
-                "links": [
-                  660,
-                  661,
-                  662
-                ]
-              },
-              {
-                "localized_name": "bboxes",
-                "name": "bboxes",
-                "type": "BOUNDING_BOX",
-                "links": []
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.19.3",
-              "Node name for S&R": "SAM3_Detect",
-              "enableTabs": false,
-              "tabWidth": 65,
-              "tabXOffset": 10,
-              "hasSecondTab": false,
-              "secondTabText": "Send Back",
-              "secondTabOffset": 80,
-              "secondTabWidth": 65
-            },
-            "widgets_values": [
-              0.5,
-              2,
-              true
-            ]
-          },
-          {
-            "id": 296,
-            "type": "MaskPreview",
-            "pos": [
-              19.31893235159108,
-              721.1888358301318
-            ],
-            "size": [
-              310,
-              390
-            ],
-            "flags": {},
-            "order": 7,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "mask",
-                "name": "mask",
-                "type": "MASK",
-                "link": 660
-              }
-            ],
-            "outputs": [],
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.19.3",
-              "Node name for S&R": "MaskPreview",
-              "enableTabs": false,
-              "tabWidth": 65,
-              "tabXOffset": 10,
-              "hasSecondTab": false,
-              "secondTabText": "Send Back",
-              "secondTabOffset": 80,
-              "secondTabWidth": 65
-            },
-            "widgets_values": []
           },
           {
             "id": 301,
@@ -1659,7 +1510,7 @@
               "Node name for S&R": "PrimitiveInt"
             },
             "widgets_values": [
-              896,
+              1024,
               "fixed"
             ]
           },
@@ -1675,7 +1526,7 @@
               168
             ],
             "flags": {},
-            "order": 16,
+            "order": 15,
             "mode": 0,
             "inputs": [
               {
@@ -1791,154 +1642,9 @@
               "Node name for S&R": "GrowMask"
             },
             "widgets_values": [
-              4,
+              24,
               true
             ]
-          },
-          {
-            "id": 319,
-            "type": "BatchUncropAdvanced",
-            "pos": [
-              3147.9601660206226,
-              677.1333418503039
-            ],
-            "size": [
-              285.36667251586914,
-              230
-            ],
-            "flags": {},
-            "order": 25,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "original_images",
-                "name": "original_images",
-                "type": "IMAGE",
-                "link": 630
-              },
-              {
-                "localized_name": "cropped_images",
-                "name": "cropped_images",
-                "type": "IMAGE",
-                "link": 631
-              },
-              {
-                "localized_name": "cropped_masks",
-                "name": "cropped_masks",
-                "type": "MASK",
-                "link": 632
-              },
-              {
-                "localized_name": "combined_crop_mask",
-                "name": "combined_crop_mask",
-                "type": "MASK",
-                "link": 633
-              },
-              {
-                "localized_name": "bboxes",
-                "name": "bboxes",
-                "type": "BBOX",
-                "link": 634
-              },
-              {
-                "localized_name": "combined_bounding_box",
-                "name": "combined_bounding_box",
-                "shape": 7,
-                "type": "BBOX",
-                "link": 635
-              },
-              {
-                "localized_name": "border_blending",
-                "name": "border_blending",
-                "type": "FLOAT",
-                "widget": {
-                  "name": "border_blending"
-                },
-                "link": 667
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "IMAGE",
-                "name": "IMAGE",
-                "type": "IMAGE",
-                "links": [
-                  637,
-                  640
-                ]
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfyui-kjnodes",
-              "ver": "1.2.0",
-              "Node name for S&R": "BatchUncropAdvanced"
-            },
-            "widgets_values": [
-              0.15,
-              1,
-              true,
-              false
-            ]
-          },
-          {
-            "id": 303,
-            "type": "PreviewImage",
-            "pos": [
-              376.3362601824384,
-              948.0010760335439
-            ],
-            "size": [
-              357.4324898938419,
-              298.4882262516584
-            ],
-            "flags": {},
-            "order": 14,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "images",
-                "name": "images",
-                "type": "IMAGE",
-                "link": 603
-              }
-            ],
-            "outputs": [],
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.21.1",
-              "Node name for S&R": "PreviewImage"
-            },
-            "widgets_values": []
-          },
-          {
-            "id": 304,
-            "type": "MaskPreview",
-            "pos": [
-              746.8923455476374,
-              956.3902202835089
-            ],
-            "size": [
-              256.5218681751252,
-              289.16060537483395
-            ],
-            "flags": {},
-            "order": 15,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "mask",
-                "name": "mask",
-                "type": "MASK",
-                "link": 604
-              }
-            ],
-            "outputs": [],
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.21.1",
-              "Node name for S&R": "MaskPreview"
-            },
-            "widgets_values": []
           },
           {
             "id": 311,
@@ -2003,7 +1709,7 @@
               106
             ],
             "flags": {},
-            "order": 21,
+            "order": 20,
             "mode": 0,
             "inputs": [
               {
@@ -2174,7 +1880,7 @@
               166
             ],
             "flags": {},
-            "order": 33,
+            "order": 31,
             "mode": 0,
             "inputs": [
               {
@@ -2214,7 +1920,7 @@
             },
             "widgets_values": [
               "",
-              "Nagato Yuki\nbody part closeup, outdoors\n(@haruhisky:0.8), (@piromizu:0.5), (@rahime:0.5)",
+              "Lum (Urusei Yatsura)\nhand closeup, pink nails\nLum is flying through the air wearing a tiger-stripe bikini and tiger-stripe gogo boots. She has orange-yellow eyes and aqua hair with chromatic highlights. She is flying toward the viewer.\nsmall oni horns, blue sky, clouds, sunbeam, pointy ears\n@hiyama_yuu_\\(wee259hiyama\\), @aono3, @dilan_griz ",
               ", "
             ],
             "color": "#232",
@@ -2232,7 +1938,7 @@
               88
             ],
             "flags": {},
-            "order": 32,
+            "order": 30,
             "mode": 0,
             "inputs": [
               {
@@ -2292,7 +1998,7 @@
               166
             ],
             "flags": {},
-            "order": 31,
+            "order": 29,
             "mode": 0,
             "inputs": [
               {
@@ -2332,7 +2038,7 @@
             },
             "widgets_values": [
               "",
-              "cat ears",
+              "cat ears, sweat",
               ", "
             ],
             "color": "#322",
@@ -2350,7 +2056,7 @@
               133.50471397576848
             ],
             "flags": {},
-            "order": 30,
+            "order": 28,
             "mode": 0,
             "inputs": [
               {
@@ -2434,6 +2140,375 @@
             ],
             "color": "#322",
             "bgcolor": "#533"
+          },
+          {
+            "id": 319,
+            "type": "BatchUncropAdvanced",
+            "pos": [
+              3147.9601660206226,
+              677.1333418503039
+            ],
+            "size": [
+              285.36667251586914,
+              230
+            ],
+            "flags": {},
+            "order": 24,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "original_images",
+                "name": "original_images",
+                "type": "IMAGE",
+                "link": 630
+              },
+              {
+                "localized_name": "cropped_images",
+                "name": "cropped_images",
+                "type": "IMAGE",
+                "link": 631
+              },
+              {
+                "localized_name": "cropped_masks",
+                "name": "cropped_masks",
+                "type": "MASK",
+                "link": 632
+              },
+              {
+                "localized_name": "combined_crop_mask",
+                "name": "combined_crop_mask",
+                "type": "MASK",
+                "link": 633
+              },
+              {
+                "localized_name": "bboxes",
+                "name": "bboxes",
+                "type": "BBOX",
+                "link": 634
+              },
+              {
+                "localized_name": "combined_bounding_box",
+                "name": "combined_bounding_box",
+                "shape": 7,
+                "type": "BBOX",
+                "link": 635
+              },
+              {
+                "localized_name": "border_blending",
+                "name": "border_blending",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "border_blending"
+                },
+                "link": 667
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  637,
+                  681
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-kjnodes",
+              "ver": "1.2.0",
+              "Node name for S&R": "BatchUncropAdvanced"
+            },
+            "widgets_values": [
+              0.05,
+              1,
+              true,
+              false
+            ]
+          },
+          {
+            "id": 300,
+            "type": "BatchCropFromMaskAdvanced",
+            "pos": [
+              382.62508740770477,
+              664.9788114192429
+            ],
+            "size": [
+              335.73333740234375,
+              242
+            ],
+            "flags": {},
+            "order": 11,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "original_images",
+                "name": "original_images",
+                "type": "IMAGE",
+                "link": 601
+              },
+              {
+                "localized_name": "masks",
+                "name": "masks",
+                "type": "MASK",
+                "link": 643
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "original_images",
+                "name": "original_images",
+                "type": "IMAGE",
+                "links": [
+                  630
+                ]
+              },
+              {
+                "localized_name": "cropped_images",
+                "name": "cropped_images",
+                "type": "IMAGE",
+                "links": []
+              },
+              {
+                "localized_name": "cropped_masks",
+                "name": "cropped_masks",
+                "type": "MASK",
+                "links": [
+                  632
+                ]
+              },
+              {
+                "localized_name": "combined_crop_image",
+                "name": "combined_crop_image",
+                "type": "IMAGE",
+                "links": [
+                  602,
+                  611,
+                  682
+                ]
+              },
+              {
+                "localized_name": "combined_crop_masks",
+                "name": "combined_crop_masks",
+                "type": "MASK",
+                "links": [
+                  604,
+                  613,
+                  633
+                ]
+              },
+              {
+                "localized_name": "bboxes",
+                "name": "bboxes",
+                "type": "BBOX",
+                "links": [
+                  634
+                ]
+              },
+              {
+                "localized_name": "combined_bounding_box",
+                "name": "combined_bounding_box",
+                "type": "BBOX",
+                "links": [
+                  635
+                ]
+              },
+              {
+                "localized_name": "bbox_width",
+                "name": "bbox_width",
+                "type": "INT",
+                "links": []
+              },
+              {
+                "localized_name": "bbox_height",
+                "name": "bbox_height",
+                "type": "INT",
+                "links": []
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-kjnodes",
+              "ver": "1.2.0",
+              "Node name for S&R": "BatchCropFromMaskAdvanced"
+            },
+            "widgets_values": [
+              1,
+              0.7
+            ]
+          },
+          {
+            "id": 325,
+            "type": "SAM3_Detect",
+            "pos": [
+              59.24236168023204,
+              415.39603299762416
+            ],
+            "size": [
+              270,
+              260
+            ],
+            "flags": {},
+            "order": 27,
+            "mode": 0,
+            "inputs": [
+              {
+                "label": "model",
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 657
+              },
+              {
+                "label": "image",
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 663
+              },
+              {
+                "label": "conditioning",
+                "localized_name": "conditioning",
+                "name": "conditioning",
+                "shape": 7,
+                "type": "CONDITIONING",
+                "link": 658
+              },
+              {
+                "label": "bboxes",
+                "localized_name": "bboxes",
+                "name": "bboxes",
+                "shape": 7,
+                "type": "BOUNDING_BOX",
+                "link": null
+              },
+              {
+                "label": "positive_coords",
+                "localized_name": "positive_coords",
+                "name": "positive_coords",
+                "shape": 7,
+                "type": "STRING",
+                "link": null
+              },
+              {
+                "label": "negative_coords",
+                "localized_name": "negative_coords",
+                "name": "negative_coords",
+                "shape": 7,
+                "type": "STRING",
+                "link": null
+              },
+              {
+                "localized_name": "individual_masks",
+                "name": "individual_masks",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "individual_masks"
+                },
+                "link": 685
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "masks",
+                "name": "masks",
+                "type": "MASK",
+                "links": [
+                  660,
+                  661,
+                  662
+                ]
+              },
+              {
+                "localized_name": "bboxes",
+                "name": "bboxes",
+                "type": "BOUNDING_BOX",
+                "links": []
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.19.3",
+              "Node name for S&R": "SAM3_Detect",
+              "enableTabs": false,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "hasSecondTab": false,
+              "secondTabText": "Send Back",
+              "secondTabOffset": 80,
+              "secondTabWidth": 65
+            },
+            "widgets_values": [
+              0.5,
+              2,
+              false
+            ]
+          },
+          {
+            "id": 296,
+            "type": "MaskPreview",
+            "pos": [
+              19.31893235159108,
+              721.1888358301318
+            ],
+            "size": [
+              310,
+              390
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "type": "MASK",
+                "link": 660
+              }
+            ],
+            "outputs": [],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.19.3",
+              "Node name for S&R": "MaskPreview",
+              "enableTabs": false,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "hasSecondTab": false,
+              "secondTabText": "Send Back",
+              "secondTabOffset": 80,
+              "secondTabWidth": 65
+            },
+            "widgets_values": []
+          },
+          {
+            "id": 304,
+            "type": "MaskPreview",
+            "pos": [
+              408.33967637114426,
+              959.3862616036557
+            ],
+            "size": [
+              313.44665325789845,
+              283.1685227345422
+            ],
+            "flags": {},
+            "order": 14,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "type": "MASK",
+                "link": 604
+              }
+            ],
+            "outputs": [],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.21.1",
+              "Node name for S&R": "MaskPreview"
+            },
+            "widgets_values": []
           }
         ],
         "groups": [
@@ -2562,14 +2637,6 @@
             "target_id": 300,
             "target_slot": 1,
             "type": "MASK"
-          },
-          {
-            "id": 603,
-            "origin_id": 300,
-            "origin_slot": 3,
-            "target_id": 303,
-            "target_slot": 0,
-            "type": "IMAGE"
           },
           {
             "id": 604,
@@ -2836,14 +2903,6 @@
             "type": "MASK"
           },
           {
-            "id": 640,
-            "origin_id": 319,
-            "origin_slot": 0,
-            "target_id": 321,
-            "target_slot": 0,
-            "type": "IMAGE"
-          },
-          {
             "id": 642,
             "origin_id": -10,
             "origin_slot": 0,
@@ -3050,6 +3109,30 @@
             "target_id": 314,
             "target_slot": 1,
             "type": "CONDITIONING"
+          },
+          {
+            "id": 681,
+            "origin_id": 319,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 2,
+            "type": "IMAGE"
+          },
+          {
+            "id": 682,
+            "origin_id": 300,
+            "origin_slot": 3,
+            "target_id": -20,
+            "target_slot": 1,
+            "type": "IMAGE"
+          },
+          {
+            "id": 685,
+            "origin_id": -10,
+            "origin_slot": 9,
+            "target_id": 325,
+            "target_slot": 6,
+            "type": "BOOLEAN"
           }
         ],
         "extra": {}
@@ -3059,10 +3142,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7634271481581398,
+      "scale": 0.6303940863128882,
       "offset": [
-        998.1340643809253,
-        -173.89648275787803
+        977.5471606340122,
+        -193.568675267428
       ]
     },
     "frontendVersion": "1.43.18"
