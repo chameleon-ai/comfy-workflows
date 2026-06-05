@@ -18,6 +18,10 @@ Side note: [Qwen3 0.6B Abliterated](https://huggingface.co/ibrahimkettaneh/Qwen3
 ![sam3 inpaint preview](sam3/sam3-inpaint-anima.png)
 Uses native SAM3 node to detect segments. Uses Anima to inpaint, but can be adapted to load any model. Segments are individually upscaled and processed before being downscaled and blended with the original input. This workflow uses as many native nodes as possible, but needs a few utility nodes to loop through multiple masks.
 
+### Anima Edit
+![anima edit preview](sam3/anima-edit.png)
+This is a slightly different approach from traditional inpainting using [Cosmos Reference](https://github.com/Mirumo0u0/ComfyUI-Cosmos-Reference) conditioning and an [edit lora](https://civitai.red/models/2652469/anima-edit-experimental?modelVersionId=2978373). There are certainly flaws to this method. In theory, this should reduce inpaint seams since the edit lora uses the whole image as conditioning without applying noise like a traditional img2img workflow. However, the edit lora is experimental and this works properly only some of the time. It appears to be very sensitive to the prompt and is only capable of making certain edits.
+
 ### Deprecated Workflow
 ![netayume preview](sam3/refine-by-segment.png)
 Uses [SAM3](https://github.com/wouterverweirder/comfyui_sam3) 3rd party node to make an img2img mask and uses [Qwen-VL](https://github.com/1038lab/ComfyUI-QwenVL) to automatically generate a prompt describing the masked segment. Set up to use SDXL img2img but can be adapted for any model.
