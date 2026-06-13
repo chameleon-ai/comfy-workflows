@@ -1,8 +1,8 @@
 {
   "id": "427967d2-22b6-4697-ad1c-438913988659",
   "revision": 0,
-  "last_node_id": 111,
-  "last_link_id": 199,
+  "last_node_id": 112,
+  "last_link_id": 200,
   "nodes": [
     {
       "id": 48,
@@ -145,18 +145,6 @@
             "cfg"
           ],
           [
-            "44",
-            "unet_name"
-          ],
-          [
-            "45",
-            "clip_name"
-          ],
-          [
-            "15",
-            "vae_name"
-          ],
-          [
             "64",
             "string_b"
           ],
@@ -200,8 +188,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 13,
-          "lastNodeId": 111,
-          "lastLinkId": 199,
+          "lastNodeId": 112,
+          "lastLinkId": 200,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -213,7 +201,7 @@
             -330,
             530,
             128.56666564941406,
-            288
+            228
           ]
         },
         "outputNode": {
@@ -298,42 +286,6 @@
             ]
           },
           {
-            "id": "c59194ea-015c-41a7-8edd-ae7ffc220b63",
-            "name": "unet_name",
-            "type": "COMBO",
-            "linkIds": [
-              101
-            ],
-            "pos": [
-              -225.43333435058594,
-              674
-            ]
-          },
-          {
-            "id": "e655aa3b-2db7-4e25-9ea2-61550fa7ae2d",
-            "name": "clip_name",
-            "type": "COMBO",
-            "linkIds": [
-              102
-            ],
-            "pos": [
-              -225.43333435058594,
-              694
-            ]
-          },
-          {
-            "id": "94965a7a-74dd-4f5a-87e3-9f87995d554f",
-            "name": "vae_name",
-            "type": "COMBO",
-            "linkIds": [
-              103
-            ],
-            "pos": [
-              -225.43333435058594,
-              714
-            ]
-          },
-          {
             "id": "fbc076d3-7e36-484a-a5ca-eeab2491bf9f",
             "name": "string_b",
             "type": "STRING",
@@ -343,7 +295,7 @@
             "label": "negative",
             "pos": [
               -225.43333435058594,
-              734
+              674
             ]
           },
           {
@@ -355,7 +307,7 @@
             ],
             "pos": [
               -225.43333435058594,
-              754
+              694
             ]
           },
           {
@@ -369,7 +321,7 @@
             "label": "use_wildcards",
             "pos": [
               -225.43333435058594,
-              774
+              714
             ]
           }
         ],
@@ -402,19 +354,9 @@
               100
             ],
             "flags": {},
-            "order": 8,
+            "order": 0,
             "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "vae_name",
-                "name": "vae_name",
-                "type": "COMBO",
-                "widget": {
-                  "name": "vae_name"
-                },
-                "link": 103
-              }
-            ],
+            "inputs": [],
             "outputs": [
               {
                 "localized_name": "VAE",
@@ -460,7 +402,7 @@
               366.8803735660232
             ],
             "flags": {},
-            "order": 0,
+            "order": 1,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -497,7 +439,7 @@
               140
             ],
             "flags": {},
-            "order": 7,
+            "order": 10,
             "mode": 0,
             "inputs": [
               {
@@ -615,7 +557,7 @@
               126.25689905509273
             ],
             "flags": {},
-            "order": 1,
+            "order": 2,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -652,7 +594,7 @@
               150
             ],
             "flags": {},
-            "order": 10,
+            "order": 12,
             "mode": 0,
             "inputs": [
               {
@@ -706,9 +648,9 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
+              1920,
               1280,
-              1024,
-              4
+              1
             ]
           },
           {
@@ -723,19 +665,9 @@
               130
             ],
             "flags": {},
-            "order": 11,
+            "order": 3,
             "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "unet_name",
-                "name": "unet_name",
-                "type": "COMBO",
-                "widget": {
-                  "name": "unet_name"
-                },
-                "link": 101
-              }
-            ],
+            "inputs": [],
             "outputs": [
               {
                 "localized_name": "MODEL",
@@ -842,19 +774,9 @@
               150
             ],
             "flags": {},
-            "order": 12,
+            "order": 4,
             "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "clip_name",
-                "name": "clip_name",
-                "type": "COMBO",
-                "widget": {
-                  "name": "clip_name"
-                },
-                "link": 102
-              }
-            ],
+            "inputs": [],
             "outputs": [
               {
                 "localized_name": "CLIP",
@@ -904,7 +826,7 @@
               620
             ],
             "flags": {},
-            "order": 9,
+            "order": 11,
             "mode": 0,
             "inputs": [
               {
@@ -974,7 +896,7 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              514455791915444,
+              934278766612716,
               "randomize",
               34,
               4,
@@ -995,7 +917,7 @@
               90
             ],
             "flags": {},
-            "order": 5,
+            "order": 8,
             "mode": 0,
             "inputs": [
               {
@@ -1050,7 +972,7 @@
             "flags": {
               "collapsed": false
             },
-            "order": 2,
+            "order": 5,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -1083,7 +1005,7 @@
               112
             ],
             "flags": {},
-            "order": 4,
+            "order": 7,
             "mode": 0,
             "inputs": [
               {
@@ -1168,9 +1090,10 @@
               }
             ],
             "properties": {
-              "aux_id": "An1X3R/Anima-Artist-Mixer",
+              "cnr_id": "anima-artist-mixer",
               "ver": "6574088890a48ab528aad88bcbed8c6cb872a2e8",
-              "Node name for S&R": "AnimaArtistPack"
+              "Node name for S&R": "AnimaArtistPack",
+              "aux_id": "An1X3R/Anima-Artist-Mixer"
             },
             "widgets_values": [
               "",
@@ -1180,59 +1103,18 @@
             "bgcolor": "#3f5159"
           },
           {
-            "id": 108,
-            "type": "AnimaArtistOptions",
-            "pos": [
-              951.1865865669098,
-              565.7526231390102
-            ],
-            "size": [
-              316.68334045410154,
-              178
-            ],
-            "flags": {},
-            "order": 3,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-              {
-                "localized_name": "advanced_options",
-                "name": "advanced_options",
-                "type": "ANIMA_OPTS",
-                "links": [
-                  198
-                ]
-              }
-            ],
-            "properties": {
-              "aux_id": "An1X3R/Anima-Artist-Mixer",
-              "ver": "6574088890a48ab528aad88bcbed8c6cb872a2e8",
-              "Node name for S&R": "AnimaArtistOptions"
-            },
-            "widgets_values": [
-              0,
-              13,
-              0,
-              0.5,
-              true,
-              ""
-            ],
-            "color": "#2a363b",
-            "bgcolor": "#3f5159"
-          },
-          {
             "id": 11,
             "type": "CLIPTextEncode",
             "pos": [
-              960.8612789476183,
-              827.0239775302513
+              1323.6119158364168,
+              818.6269720467146
             ],
             "size": [
               320.2705316708917,
               106.63400000000001
             ],
             "flags": {},
-            "order": 6,
+            "order": 9,
             "mode": 0,
             "inputs": [
               {
@@ -1312,7 +1194,7 @@
                 "name": "advanced_options",
                 "shape": 7,
                 "type": "ANIMA_OPTS",
-                "link": 198
+                "link": 200
               }
             ],
             "outputs": [
@@ -1334,9 +1216,10 @@
               }
             ],
             "properties": {
-              "aux_id": "An1X3R/Anima-Artist-Mixer",
+              "cnr_id": "anima-artist-mixer",
               "ver": "6574088890a48ab528aad88bcbed8c6cb872a2e8",
-              "Node name for S&R": "AnimaArtistCrossAttn"
+              "Node name for S&R": "AnimaArtistCrossAttn",
+              "aux_id": "An1X3R/Anima-Artist-Mixer"
             },
             "widgets_values": [
               "output_avg",
@@ -1465,6 +1348,53 @@
             ],
             "color": "#432",
             "bgcolor": "#653"
+          },
+          {
+            "id": 112,
+            "type": "AnimaArtistOptions",
+            "pos": [
+              941.2458685136618,
+              530.7827795686062
+            ],
+            "size": [
+              329.73333740234375,
+              370
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "advanced_options",
+                "name": "advanced_options",
+                "type": "ANIMA_OPTS",
+                "links": [
+                  200
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "anima-artist-mixer",
+              "ver": "d21b46c576bed4895e70b35842c6d3c5e850664d",
+              "Node name for S&R": "AnimaArtistOptions"
+            },
+            "widgets_values": [
+              0,
+              13,
+              0,
+              0.5,
+              true,
+              0,
+              1,
+              false,
+              6,
+              false,
+              1,
+              0,
+              -1,
+              ""
+            ]
           }
         ],
         "groups": [
@@ -1520,8 +1450,8 @@
             "id": 13,
             "title": "Skip Wildcards",
             "bounding": [
-              933.8175976939509,
-              750.0063710390104,
+              1296.5682345827495,
+              741.6093655554738,
               388.89700000000005,
               223.74799999999982
             ],
@@ -1619,30 +1549,6 @@
             "type": "FLOAT"
           },
           {
-            "id": 101,
-            "origin_id": -10,
-            "origin_slot": 6,
-            "target_id": 44,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
-            "id": 102,
-            "origin_id": -10,
-            "origin_slot": 7,
-            "target_id": 45,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
-            "id": 103,
-            "origin_id": -10,
-            "origin_slot": 8,
-            "target_id": 15,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
             "id": 104,
             "origin_id": -10,
             "origin_slot": 0,
@@ -1677,7 +1583,7 @@
           {
             "id": 109,
             "origin_id": -10,
-            "origin_slot": 9,
+            "origin_slot": 6,
             "target_id": 64,
             "target_slot": 1,
             "type": "STRING"
@@ -1685,7 +1591,7 @@
           {
             "id": 110,
             "origin_id": -10,
-            "origin_slot": 10,
+            "origin_slot": 7,
             "target_id": 28,
             "target_slot": 2,
             "type": "INT"
@@ -1693,7 +1599,7 @@
           {
             "id": 174,
             "origin_id": -10,
-            "origin_slot": 11,
+            "origin_slot": 8,
             "target_id": 104,
             "target_slot": 2,
             "type": "BOOLEAN"
@@ -1803,20 +1709,20 @@
             "type": "STRING"
           },
           {
-            "id": 198,
-            "origin_id": 108,
+            "id": 199,
+            "origin_id": -10,
+            "origin_slot": 8,
+            "target_id": 111,
+            "target_slot": 2,
+            "type": "BOOLEAN"
+          },
+          {
+            "id": 200,
+            "origin_id": 112,
             "origin_slot": 0,
             "target_id": 107,
             "target_slot": 2,
             "type": "ANIMA_OPTS"
-          },
-          {
-            "id": 199,
-            "origin_id": -10,
-            "origin_slot": 11,
-            "target_id": 111,
-            "target_slot": 2,
-            "type": "BOOLEAN"
           }
         ],
         "extra": {}
@@ -1826,8 +1732,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 13,
-          "lastNodeId": 111,
-          "lastLinkId": 199,
+          "lastNodeId": 112,
+          "lastLinkId": 200,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -1911,7 +1817,7 @@
             },
             "widgets_values": [
               "",
-              397408292688450,
+              543739196651261,
               "randomize",
               1
             ]
@@ -1959,7 +1865,7 @@
             },
             "widgets_values": [
               "",
-              944940972668652,
+              456818583100562,
               "randomize",
               1
             ]
@@ -2007,7 +1913,7 @@
             },
             "widgets_values": [
               "",
-              1079024269947406,
+              164892652181909,
               "randomize",
               1
             ]
@@ -2055,7 +1961,7 @@
             },
             "widgets_values": [
               "",
-              1115804249556258,
+              325837415285448,
               "randomize",
               1
             ]
@@ -2376,17 +2282,17 @@
   },
   "config": {},
   "extra": {
-    "frontendVersion": "1.44.19",
+    "frontendVersion": "1.45.15",
     "workflowRendererVersion": "Vue-corrected",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.720494944520577,
+      "scale": 0.7920000000000001,
       "offset": [
-        577.783007634091,
-        227.4309149043513
+        535.4166666666665,
+        148.5604482323231
       ]
     }
   },

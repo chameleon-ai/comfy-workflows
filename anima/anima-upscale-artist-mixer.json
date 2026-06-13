@@ -1,8 +1,8 @@
 {
   "id": "f7a250a1-53fb-496b-8c39-c60d9e764028",
   "revision": 0,
-  "last_node_id": 90,
-  "last_link_id": 173,
+  "last_node_id": 91,
+  "last_link_id": 174,
   "nodes": [
     {
       "id": 48,
@@ -276,8 +276,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 7,
-          "lastNodeId": 90,
-          "lastLinkId": 173,
+          "lastNodeId": 91,
+          "lastLinkId": 174,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -668,7 +668,7 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              310186611466212,
+              85945350929853,
               "randomize",
               15,
               4,
@@ -808,7 +808,7 @@
               "Node name for S&R": "PrimitiveInt"
             },
             "widgets_values": [
-              863346924766899,
+              687374162949396,
               "randomize"
             ]
           },
@@ -892,7 +892,7 @@
             ],
             "size": [
               210,
-              128
+              148
             ],
             "flags": {},
             "order": 17,
@@ -1289,7 +1289,7 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              17562352048587,
+              561484937245054,
               "randomize",
               24,
               4,
@@ -1386,7 +1386,7 @@
               "Node name for S&R": "PrimitiveInt"
             },
             "widgets_values": [
-              16,
+              17,
               "fixed"
             ]
           },
@@ -1493,7 +1493,7 @@
                 "name": "advanced_options",
                 "shape": 7,
                 "type": "ANIMA_OPTS",
-                "link": 170
+                "link": 174
               },
               {
                 "localized_name": "enabled",
@@ -1526,9 +1526,10 @@
               }
             ],
             "properties": {
-              "aux_id": "An1X3R/Anima-Artist-Mixer",
+              "cnr_id": "anima-artist-mixer",
               "ver": "6574088890a48ab528aad88bcbed8c6cb872a2e8",
-              "Node name for S&R": "AnimaArtistCrossAttn"
+              "Node name for S&R": "AnimaArtistCrossAttn",
+              "aux_id": "An1X3R/Anima-Artist-Mixer"
             },
             "widgets_values": [
               "output_avg",
@@ -1643,9 +1644,10 @@
               }
             ],
             "properties": {
-              "aux_id": "An1X3R/Anima-Artist-Mixer",
+              "cnr_id": "anima-artist-mixer",
               "ver": "6574088890a48ab528aad88bcbed8c6cb872a2e8",
-              "Node name for S&R": "AnimaArtistPack"
+              "Node name for S&R": "AnimaArtistPack",
+              "aux_id": "An1X3R/Anima-Artist-Mixer"
             },
             "widgets_values": [
               "@haruhisky\n@piromizu\n@rahime",
@@ -1711,47 +1713,6 @@
             ],
             "color": "#232",
             "bgcolor": "#353"
-          },
-          {
-            "id": 90,
-            "type": "AnimaArtistOptions",
-            "pos": [
-              988.4279253714083,
-              375.1695760776119
-            ],
-            "size": [
-              316.68334045410154,
-              178
-            ],
-            "flags": {},
-            "order": 6,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-              {
-                "localized_name": "advanced_options",
-                "name": "advanced_options",
-                "type": "ANIMA_OPTS",
-                "links": [
-                  170
-                ]
-              }
-            ],
-            "properties": {
-              "aux_id": "An1X3R/Anima-Artist-Mixer",
-              "ver": "6574088890a48ab528aad88bcbed8c6cb872a2e8",
-              "Node name for S&R": "AnimaArtistOptions"
-            },
-            "widgets_values": [
-              0,
-              13,
-              0,
-              0.5,
-              true,
-              ""
-            ],
-            "color": "#2a363b",
-            "bgcolor": "#3f5159"
           },
           {
             "id": 75,
@@ -1848,6 +1809,53 @@
             "widgets_values": [
               "bislerp",
               1.25
+            ]
+          },
+          {
+            "id": 91,
+            "type": "AnimaArtistOptions",
+            "pos": [
+              998.3462574320215,
+              388.53576288150475
+            ],
+            "size": [
+              329.73333740234375,
+              370
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "advanced_options",
+                "name": "advanced_options",
+                "type": "ANIMA_OPTS",
+                "links": [
+                  174
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "anima-artist-mixer",
+              "ver": "d21b46c576bed4895e70b35842c6d3c5e850664d",
+              "Node name for S&R": "AnimaArtistOptions"
+            },
+            "widgets_values": [
+              0,
+              13,
+              0,
+              0.5,
+              true,
+              0,
+              1,
+              false,
+              6,
+              false,
+              1,
+              0,
+              -1,
+              ""
             ]
           }
         ],
@@ -2275,14 +2283,6 @@
             "type": "STRING"
           },
           {
-            "id": 170,
-            "origin_id": 90,
-            "origin_slot": 0,
-            "target_id": 87,
-            "target_slot": 2,
-            "type": "ANIMA_OPTS"
-          },
-          {
             "id": 171,
             "origin_id": -10,
             "origin_slot": 7,
@@ -2305,6 +2305,14 @@
             "target_id": 68,
             "target_slot": 6,
             "type": "FLOAT"
+          },
+          {
+            "id": 174,
+            "origin_id": 91,
+            "origin_slot": 0,
+            "target_id": 87,
+            "target_slot": 2,
+            "type": "ANIMA_OPTS"
           }
         ],
         "extra": {}
@@ -2313,7 +2321,7 @@
   },
   "config": {},
   "extra": {
-    "frontendVersion": "1.44.19",
+    "frontendVersion": "1.45.15",
     "workflowRendererVersion": "Vue-corrected",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
@@ -2322,8 +2330,8 @@
     "ds": {
       "scale": 0.7983812300735899,
       "offset": [
-        416.94254559550797,
-        4.040467895866284
+        413.1849422263462,
+        75.43493190993895
       ]
     }
   },

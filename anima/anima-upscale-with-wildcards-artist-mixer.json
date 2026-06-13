@@ -1,8 +1,8 @@
 {
   "id": "5f7f54ee-2dee-46b1-80d3-a1be2e5df457",
   "revision": 0,
-  "last_node_id": 121,
-  "last_link_id": 220,
+  "last_node_id": 123,
+  "last_link_id": 221,
   "nodes": [
     {
       "id": 48,
@@ -26,35 +26,6 @@
       ],
       "color": "#222",
       "bgcolor": "#000"
-    },
-    {
-      "id": 86,
-      "type": "PreviewImage",
-      "pos": [
-        572.9124017860905,
-        754.3867507392263
-      ],
-      "size": [
-        945.2205835810021,
-        479.4575543147671
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 146
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.22.0",
-        "Node name for S&R": "PreviewImage"
-      },
-      "widgets_values": []
     },
     {
       "id": 46,
@@ -93,6 +64,35 @@
       "widgets_values": [
         "Anima"
       ]
+    },
+    {
+      "id": 86,
+      "type": "PreviewImage",
+      "pos": [
+        572.9124017860905,
+        754.3867507392263
+      ],
+      "size": [
+        945.2205835810021,
+        479.4575543147671
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 146
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.22.0",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
     },
     {
       "id": 60,
@@ -195,18 +195,6 @@
             "cfg"
           ],
           [
-            "44",
-            "unet_name"
-          ],
-          [
-            "45",
-            "clip_name"
-          ],
-          [
-            "15",
-            "vae_name"
-          ],
-          [
             "64",
             "string_b"
           ],
@@ -266,8 +254,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 15,
-          "lastNodeId": 121,
-          "lastLinkId": 220,
+          "lastNodeId": 123,
+          "lastLinkId": 221,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -279,7 +267,7 @@
             -330,
             530,
             152.81666564941406,
-            308
+            248
           ]
         },
         "outputNode": {
@@ -356,42 +344,6 @@
             ]
           },
           {
-            "id": "c59194ea-015c-41a7-8edd-ae7ffc220b63",
-            "name": "unet_name",
-            "type": "COMBO",
-            "linkIds": [
-              101
-            ],
-            "pos": [
-              -201.18333435058594,
-              654
-            ]
-          },
-          {
-            "id": "e655aa3b-2db7-4e25-9ea2-61550fa7ae2d",
-            "name": "clip_name",
-            "type": "COMBO",
-            "linkIds": [
-              102
-            ],
-            "pos": [
-              -201.18333435058594,
-              674
-            ]
-          },
-          {
-            "id": "94965a7a-74dd-4f5a-87e3-9f87995d554f",
-            "name": "vae_name",
-            "type": "COMBO",
-            "linkIds": [
-              103
-            ],
-            "pos": [
-              -201.18333435058594,
-              694
-            ]
-          },
-          {
             "id": "fbc076d3-7e36-484a-a5ca-eeab2491bf9f",
             "name": "string_b",
             "type": "STRING",
@@ -401,7 +353,7 @@
             "label": "negative",
             "pos": [
               -201.18333435058594,
-              714
+              654
             ]
           },
           {
@@ -413,7 +365,7 @@
             ],
             "pos": [
               -201.18333435058594,
-              734
+              674
             ]
           },
           {
@@ -427,7 +379,7 @@
             ],
             "pos": [
               -201.18333435058594,
-              754
+              694
             ]
           },
           {
@@ -440,7 +392,7 @@
             "label": "upscaled_steps",
             "pos": [
               -201.18333435058594,
-              774
+              714
             ]
           },
           {
@@ -454,7 +406,7 @@
             "label": "use_wildcards",
             "pos": [
               -201.18333435058594,
-              794
+              734
             ]
           }
         ],
@@ -500,7 +452,7 @@
               166
             ],
             "flags": {},
-            "order": 17,
+            "order": 14,
             "mode": 0,
             "inputs": [
               {
@@ -540,7 +492,7 @@
             },
             "widgets_values": [
               "",
-              "white background, character card, manga panel, blank background, nude, nsfw\n",
+              "shiny skin, red sclera, tall, orc, long legs, elf, human, ass focus, looking at viewer, motor vehicle, truck, choker, plants, grass, nsfw, nude",
               ", "
             ],
             "color": "#322",
@@ -558,7 +510,7 @@
               82
             ],
             "flags": {},
-            "order": 18,
+            "order": 15,
             "mode": 0,
             "inputs": [
               {
@@ -609,19 +561,9 @@
               100
             ],
             "flags": {},
-            "order": 11,
+            "order": 0,
             "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "vae_name",
-                "name": "vae_name",
-                "type": "COMBO",
-                "widget": {
-                  "name": "vae_name"
-                },
-                "link": 103
-              }
-            ],
+            "inputs": [],
             "outputs": [
               {
                 "localized_name": "VAE",
@@ -668,7 +610,7 @@
               90
             ],
             "flags": {},
-            "order": 20,
+            "order": 17,
             "mode": 0,
             "inputs": [
               {
@@ -721,7 +663,7 @@
               620
             ],
             "flags": {},
-            "order": 19,
+            "order": 16,
             "mode": 0,
             "inputs": [
               {
@@ -800,7 +742,7 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              717543129139563,
+              569752988999795,
               "randomize",
               15,
               4,
@@ -821,7 +763,7 @@
               82
             ],
             "flags": {},
-            "order": 23,
+            "order": 20,
             "mode": 0,
             "inputs": [
               {
@@ -856,77 +798,6 @@
             ]
           },
           {
-            "id": 28,
-            "type": "EmptyLatentImage",
-            "pos": [
-              7.883796275919739,
-              1176.0006253362394
-            ],
-            "size": [
-              310,
-              150
-            ],
-            "flags": {},
-            "order": 13,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "width",
-                "name": "width",
-                "type": "INT",
-                "widget": {
-                  "name": "width"
-                },
-                "link": 129
-              },
-              {
-                "localized_name": "height",
-                "name": "height",
-                "type": "INT",
-                "widget": {
-                  "name": "height"
-                },
-                "link": 130
-              },
-              {
-                "localized_name": "batch_size",
-                "name": "batch_size",
-                "type": "INT",
-                "widget": {
-                  "name": "batch_size"
-                },
-                "link": 110
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "LATENT",
-                "name": "LATENT",
-                "type": "LATENT",
-                "links": [
-                  78
-                ]
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.3.40",
-              "Node name for S&R": "EmptyLatentImage",
-              "enableTabs": false,
-              "tabWidth": 65,
-              "tabXOffset": 10,
-              "hasSecondTab": false,
-              "secondTabText": "Send Back",
-              "secondTabOffset": 80,
-              "secondTabWidth": 65
-            },
-            "widgets_values": [
-              1280,
-              1920,
-              4
-            ]
-          },
-          {
             "id": 76,
             "type": "PrimitiveInt",
             "pos": [
@@ -938,7 +809,7 @@
               82
             ],
             "flags": {},
-            "order": 24,
+            "order": 21,
             "mode": 0,
             "inputs": [
               {
@@ -1045,7 +916,7 @@
               620
             ],
             "flags": {},
-            "order": 12,
+            "order": 11,
             "mode": 0,
             "inputs": [
               {
@@ -1125,7 +996,7 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              372060498937712,
+              385860229774139,
               "randomize",
               24,
               4,
@@ -1146,7 +1017,7 @@
               296.25381018110727
             ],
             "flags": {},
-            "order": 0,
+            "order": 1,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -1183,7 +1054,7 @@
               240.12421553281433
             ],
             "flags": {},
-            "order": 1,
+            "order": 2,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -1220,7 +1091,7 @@
               82
             ],
             "flags": {},
-            "order": 2,
+            "order": 3,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -1241,7 +1112,7 @@
               "Node name for S&R": "PrimitiveInt"
             },
             "widgets_values": [
-              535051432788144,
+              -234950018012177,
               "randomize"
             ]
           },
@@ -1257,7 +1128,7 @@
               82
             ],
             "flags": {},
-            "order": 26,
+            "order": 23,
             "mode": 0,
             "inputs": [
               {
@@ -1303,7 +1174,7 @@
               82
             ],
             "flags": {},
-            "order": 25,
+            "order": 22,
             "mode": 0,
             "inputs": [
               {
@@ -1333,7 +1204,7 @@
               "Node name for S&R": "PrimitiveInt"
             },
             "widgets_values": [
-              16,
+              17,
               "fixed"
             ]
           },
@@ -1349,7 +1220,7 @@
               148
             ],
             "flags": {},
-            "order": 21,
+            "order": 18,
             "mode": 0,
             "inputs": [
               {
@@ -1420,7 +1291,7 @@
               148
             ],
             "flags": {},
-            "order": 22,
+            "order": 19,
             "mode": 0,
             "inputs": [
               {
@@ -1533,41 +1404,6 @@
             "widgets_values": []
           },
           {
-            "id": 114,
-            "type": "f6930a36-4e46-43d8-954e-642317bdc7c2",
-            "pos": [
-              1000.095929901127,
-              169.57835925203932
-            ],
-            "size": [
-              238.3381999999997,
-              98.66580000000002
-            ],
-            "flags": {
-              "collapsed": false
-            },
-            "order": 3,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-              {
-                "name": "STRING",
-                "type": "STRING",
-                "links": [
-                  199
-                ]
-              }
-            ],
-            "properties": {
-              "proxyWidgets": [],
-              "cnr_id": "comfy-core",
-              "ver": "0.7.0"
-            },
-            "widgets_values": [],
-            "color": "#2a363b",
-            "bgcolor": "#3f5159"
-          },
-          {
             "id": 115,
             "type": "PreviewAny",
             "pos": [
@@ -1579,7 +1415,7 @@
               112
             ],
             "flags": {},
-            "order": 6,
+            "order": 8,
             "mode": 0,
             "inputs": [
               {
@@ -1624,7 +1460,7 @@
               142
             ],
             "flags": {},
-            "order": 7,
+            "order": 24,
             "mode": 0,
             "inputs": [
               {
@@ -1664,9 +1500,10 @@
               }
             ],
             "properties": {
-              "aux_id": "An1X3R/Anima-Artist-Mixer",
+              "cnr_id": "anima-artist-mixer",
               "ver": "6574088890a48ab528aad88bcbed8c6cb872a2e8",
-              "Node name for S&R": "AnimaArtistPack"
+              "Node name for S&R": "AnimaArtistPack",
+              "aux_id": "An1X3R/Anima-Artist-Mixer"
             },
             "widgets_values": [
               "",
@@ -1674,107 +1511,6 @@
             ],
             "color": "#2a363b",
             "bgcolor": "#3f5159"
-          },
-          {
-            "id": 117,
-            "type": "AnimaArtistOptions",
-            "pos": [
-              1023.4734457155865,
-              561.4529508947966
-            ],
-            "size": [
-              316.68334045410154,
-              178
-            ],
-            "flags": {},
-            "order": 4,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-              {
-                "localized_name": "advanced_options",
-                "name": "advanced_options",
-                "type": "ANIMA_OPTS",
-                "links": [
-                  202
-                ]
-              }
-            ],
-            "properties": {
-              "aux_id": "An1X3R/Anima-Artist-Mixer",
-              "ver": "6574088890a48ab528aad88bcbed8c6cb872a2e8",
-              "Node name for S&R": "AnimaArtistOptions"
-            },
-            "widgets_values": [
-              0,
-              13,
-              0,
-              0.5,
-              true,
-              ""
-            ],
-            "color": "#2a363b",
-            "bgcolor": "#3f5159"
-          },
-          {
-            "id": 118,
-            "type": "CLIPTextEncode",
-            "pos": [
-              1033.148138096295,
-              822.7243052860373
-            ],
-            "size": [
-              320.2705316708917,
-              106.63400000000001
-            ],
-            "flags": {},
-            "order": 5,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "clip",
-                "name": "clip",
-                "type": "CLIP",
-                "link": 218
-              },
-              {
-                "localized_name": "text",
-                "name": "text",
-                "type": "STRING",
-                "widget": {
-                  "name": "text"
-                },
-                "link": 220
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "CONDITIONING",
-                "name": "CONDITIONING",
-                "type": "CONDITIONING",
-                "links": [
-                  204
-                ]
-              }
-            ],
-            "title": "CLIP Text Encode (Positive Prompt)",
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.3.65",
-              "Node name for S&R": "CLIPTextEncode",
-              "enableTabs": false,
-              "tabWidth": 65,
-              "tabXOffset": 10,
-              "hasSecondTab": false,
-              "secondTabText": "Send Back",
-              "secondTabOffset": 80,
-              "secondTabWidth": 65
-            },
-            "widgets_values": [
-              "masterpiece, best quality, score_7, safe, anime, a close-up of a futuristic cyberpunk robotic eye, original close-up eye composition strictly preserved, encased in weathered metallic blue and chrome plating with exposed wiring, glowing orange indicator lights, hydraulic pistons, and panel seams wrapping around the eyelid, a chrome mechanical tear duct with fine circuit details, long dark anime-style eyelashes framing the eye, soft pink sclera. The dark pupil holds a complete, glowing Earth with blue atmosphere and white clouds as a reflection, while the surrounding iris reflects a vivid cosmic scene: a fiery red shooting star, wispy cyan nebula clouds, and tiny glowing star specks. No change to the original close-up eye framing, no additional elements outside the eye structure, neon accent lighting, high contrast cyberpunk color palette, intricate mechanical engineering, sharp line art, gritty futuristic sci-fi atmosphere."
-            ],
-            "color": "#232",
-            "bgcolor": "#353"
           },
           {
             "id": 119,
@@ -1788,7 +1524,7 @@
               194
             ],
             "flags": {},
-            "order": 8,
+            "order": 26,
             "mode": 0,
             "inputs": [
               {
@@ -1808,7 +1544,7 @@
                 "name": "advanced_options",
                 "shape": 7,
                 "type": "ANIMA_OPTS",
-                "link": 202
+                "link": 221
               }
             ],
             "outputs": [
@@ -1830,9 +1566,10 @@
               }
             ],
             "properties": {
-              "aux_id": "An1X3R/Anima-Artist-Mixer",
+              "cnr_id": "anima-artist-mixer",
               "ver": "6574088890a48ab528aad88bcbed8c6cb872a2e8",
-              "Node name for S&R": "AnimaArtistCrossAttn"
+              "Node name for S&R": "AnimaArtistCrossAttn",
+              "aux_id": "An1X3R/Anima-Artist-Mixer"
             },
             "widgets_values": [
               "output_avg",
@@ -1976,19 +1713,9 @@
               130
             ],
             "flags": {},
-            "order": 14,
+            "order": 4,
             "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "unet_name",
-                "name": "unet_name",
-                "type": "COMBO",
-                "widget": {
-                  "name": "unet_name"
-                },
-                "link": 101
-              }
-            ],
+            "inputs": [],
             "outputs": [
               {
                 "localized_name": "MODEL",
@@ -2036,19 +1763,9 @@
               150
             ],
             "flags": {},
-            "order": 15,
+            "order": 5,
             "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "clip_name",
-                "name": "clip_name",
-                "type": "COMBO",
-                "widget": {
-                  "name": "clip_name"
-                },
-                "link": 102
-              }
-            ],
+            "inputs": [],
             "outputs": [
               {
                 "localized_name": "CLIP",
@@ -2098,7 +1815,7 @@
               290.0009111823367
             ],
             "flags": {},
-            "order": 16,
+            "order": 13,
             "mode": 0,
             "inputs": [
               {
@@ -2139,11 +1856,224 @@
             },
             "widgets_values": [
               "",
-              "A woman is standing by a lake at twilight. She is barefoot and wearing a celestrial robe and holding a staff with a glowing purple crystal emitting a soft light. She has red hair and aqua eyes. She is looking off into the distance. \nNext to the woman is a stone golem with glowing purple eyes. The stone golem is rough and rocky and seated on the ground near the woman. The ground surrounding the golem is a magic circle and glowing purple runes.\nfantasy, magic, scenery\nThe setting is a beautiful lake at the foot of a mountain. Dim stars can be seen as the sun sets, casting golden twilight on the mountain peaks. The distant background is blurred by depth of feild.",
+              "gobbo, goblin girl, short, green skin, pointy ears, short, (shortstack:0.7), (thick_thighs:0.5), dirt, grime, 1girl\n\nA goblin girl is kneeling, leaning forward and inspecting a large gemstone. She has green skin, orange eyes, and short colorful hair. She is wearing dirty overalls. She has leather gloves, bare legs, and leather boots. She is holding a lantern in her left hand, and reaching for the gem with her right hand. The glimmering gem is lodged in the ground in front of her. She has an enamored expression on her face with a greedy smile and sharp teeth and her eyes glimmer with the reflection of the gemstone.\n\nThe setting is a dark underground mine. The subject is dimly lit by the soft light of the lantern. A shovel and backpack are nearby on the rocky ground. A minecart is in the far distance with rocks and boulders. The rock walls of the cave are speckled with tiny sparkles of light indicating small gems. off-center composition\n",
               ", "
             ],
             "color": "#232",
             "bgcolor": "#353"
+          },
+          {
+            "id": 114,
+            "type": "f6930a36-4e46-43d8-954e-642317bdc7c2",
+            "pos": [
+              1000.095929901127,
+              169.57835925203932
+            ],
+            "size": [
+              238.3381999999997,
+              98.66580000000002
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 6,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  199
+                ]
+              }
+            ],
+            "properties": {
+              "proxyWidgets": [],
+              "cnr_id": "comfy-core",
+              "ver": "0.7.0"
+            },
+            "widgets_values": [],
+            "color": "#2a363b",
+            "bgcolor": "#3f5159"
+          },
+          {
+            "id": 28,
+            "type": "EmptyLatentImage",
+            "pos": [
+              7.883796275919739,
+              1176.0006253362394
+            ],
+            "size": [
+              310,
+              150
+            ],
+            "flags": {},
+            "order": 12,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "width",
+                "name": "width",
+                "type": "INT",
+                "widget": {
+                  "name": "width"
+                },
+                "link": 129
+              },
+              {
+                "localized_name": "height",
+                "name": "height",
+                "type": "INT",
+                "widget": {
+                  "name": "height"
+                },
+                "link": 130
+              },
+              {
+                "localized_name": "batch_size",
+                "name": "batch_size",
+                "type": "INT",
+                "widget": {
+                  "name": "batch_size"
+                },
+                "link": 110
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "LATENT",
+                "name": "LATENT",
+                "type": "LATENT",
+                "links": [
+                  78
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.40",
+              "Node name for S&R": "EmptyLatentImage",
+              "enableTabs": false,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "hasSecondTab": false,
+              "secondTabText": "Send Back",
+              "secondTabOffset": 80,
+              "secondTabWidth": 65
+            },
+            "widgets_values": [
+              1280,
+              1920,
+              1
+            ]
+          },
+          {
+            "id": 118,
+            "type": "CLIPTextEncode",
+            "pos": [
+              1479.3688733153772,
+              831.9819968880917
+            ],
+            "size": [
+              320.2705316708917,
+              106.63400000000001
+            ],
+            "flags": {},
+            "order": 25,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 218
+              },
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "widget": {
+                  "name": "text"
+                },
+                "link": 220
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "CONDITIONING",
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "links": [
+                  204
+                ]
+              }
+            ],
+            "title": "CLIP Text Encode (Positive Prompt)",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.65",
+              "Node name for S&R": "CLIPTextEncode",
+              "enableTabs": false,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "hasSecondTab": false,
+              "secondTabText": "Send Back",
+              "secondTabOffset": 80,
+              "secondTabWidth": 65
+            },
+            "widgets_values": [
+              "masterpiece, best quality, score_7, safe, anime, a close-up of a futuristic cyberpunk robotic eye, original close-up eye composition strictly preserved, encased in weathered metallic blue and chrome plating with exposed wiring, glowing orange indicator lights, hydraulic pistons, and panel seams wrapping around the eyelid, a chrome mechanical tear duct with fine circuit details, long dark anime-style eyelashes framing the eye, soft pink sclera. The dark pupil holds a complete, glowing Earth with blue atmosphere and white clouds as a reflection, while the surrounding iris reflects a vivid cosmic scene: a fiery red shooting star, wispy cyan nebula clouds, and tiny glowing star specks. No change to the original close-up eye framing, no additional elements outside the eye structure, neon accent lighting, high contrast cyberpunk color palette, intricate mechanical engineering, sharp line art, gritty futuristic sci-fi atmosphere."
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+          },
+          {
+            "id": 123,
+            "type": "AnimaArtistOptions",
+            "pos": [
+              1032.055364559008,
+              570.4450259354087
+            ],
+            "size": [
+              329.73333740234375,
+              370
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "advanced_options",
+                "name": "advanced_options",
+                "type": "ANIMA_OPTS",
+                "links": [
+                  221
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "anima-artist-mixer",
+              "ver": "d21b46c576bed4895e70b35842c6d3c5e850664d",
+              "Node name for S&R": "AnimaArtistOptions"
+            },
+            "widgets_values": [
+              0,
+              13,
+              0,
+              0.5,
+              true,
+              0,
+              1,
+              false,
+              6,
+              false,
+              1,
+              0,
+              -1,
+              ""
+            ]
           }
         ],
         "groups": [
@@ -2235,8 +2165,8 @@
             "id": 15,
             "title": "Skip Wildcards",
             "bounding": [
-              1006.1044568426286,
-              745.7066987947965,
+              1431.7059058641144,
+              737.5741870300546,
               388.89700000000005,
               223.74799999999982
             ],
@@ -2294,30 +2224,6 @@
             "type": "FLOAT"
           },
           {
-            "id": 101,
-            "origin_id": -10,
-            "origin_slot": 5,
-            "target_id": 44,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
-            "id": 102,
-            "origin_id": -10,
-            "origin_slot": 6,
-            "target_id": 45,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
-            "id": 103,
-            "origin_id": -10,
-            "origin_slot": 7,
-            "target_id": 15,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
             "id": 104,
             "origin_id": -10,
             "origin_slot": 0,
@@ -2352,7 +2258,7 @@
           {
             "id": 109,
             "origin_id": -10,
-            "origin_slot": 8,
+            "origin_slot": 5,
             "target_id": 64,
             "target_slot": 1,
             "type": "STRING"
@@ -2360,7 +2266,7 @@
           {
             "id": 110,
             "origin_id": -10,
-            "origin_slot": 9,
+            "origin_slot": 6,
             "target_id": 28,
             "target_slot": 2,
             "type": "INT"
@@ -2376,7 +2282,7 @@
           {
             "id": 113,
             "origin_id": -10,
-            "origin_slot": 10,
+            "origin_slot": 7,
             "target_id": 67,
             "target_slot": 1,
             "type": "FLOAT"
@@ -2432,7 +2338,7 @@
           {
             "id": 123,
             "origin_id": -10,
-            "origin_slot": 10,
+            "origin_slot": 7,
             "target_id": 70,
             "target_slot": 1,
             "type": "FLOAT,INT,BOOLEAN"
@@ -2440,7 +2346,7 @@
           {
             "id": 127,
             "origin_id": -10,
-            "origin_slot": 10,
+            "origin_slot": 7,
             "target_id": 73,
             "target_slot": 1,
             "type": "FLOAT,INT,BOOLEAN"
@@ -2504,7 +2410,7 @@
           {
             "id": 136,
             "origin_id": -10,
-            "origin_slot": 11,
+            "origin_slot": 8,
             "target_id": 77,
             "target_slot": 0,
             "type": "INT"
@@ -2574,14 +2480,6 @@
             "type": "ANIMA_PACK"
           },
           {
-            "id": 202,
-            "origin_id": 117,
-            "origin_slot": 0,
-            "target_id": 119,
-            "target_slot": 2,
-            "type": "ANIMA_OPTS"
-          },
-          {
             "id": 203,
             "origin_id": 119,
             "origin_slot": 0,
@@ -2640,7 +2538,7 @@
           {
             "id": 213,
             "origin_id": -10,
-            "origin_slot": 12,
+            "origin_slot": 9,
             "target_id": 121,
             "target_slot": 2,
             "type": "BOOLEAN"
@@ -2648,7 +2546,7 @@
           {
             "id": 214,
             "origin_id": -10,
-            "origin_slot": 12,
+            "origin_slot": 9,
             "target_id": 120,
             "target_slot": 2,
             "type": "BOOLEAN"
@@ -2700,6 +2598,14 @@
             "target_id": 118,
             "target_slot": 1,
             "type": "STRING"
+          },
+          {
+            "id": 221,
+            "origin_id": 123,
+            "origin_slot": 0,
+            "target_id": 119,
+            "target_slot": 2,
+            "type": "ANIMA_OPTS"
           }
         ],
         "extra": {}
@@ -2709,8 +2615,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 15,
-          "lastNodeId": 121,
-          "lastLinkId": 220,
+          "lastNodeId": 123,
+          "lastLinkId": 221,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -2794,7 +2700,7 @@
             },
             "widgets_values": [
               "",
-              165205584271759,
+              740859020806178,
               "randomize",
               1
             ]
@@ -2842,7 +2748,7 @@
             },
             "widgets_values": [
               "",
-              220995910705584,
+              693959653911355,
               "randomize",
               1
             ]
@@ -2890,7 +2796,7 @@
             },
             "widgets_values": [
               "",
-              610053480440512,
+              349378049909596,
               "randomize",
               1
             ]
@@ -2938,7 +2844,7 @@
             },
             "widgets_values": [
               "",
-              217794517562793,
+              1005336260416455,
               "randomize",
               1
             ]
@@ -3259,17 +3165,17 @@
   },
   "config": {},
   "extra": {
-    "frontendVersion": "1.44.19",
+    "frontendVersion": "1.45.15",
     "workflowRendererVersion": "Vue-corrected",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.9429123377583425,
+      "scale": 0.7634836970244238,
       "offset": [
-        462.999629060668,
-        142.6414988835254
+        561.8459089743665,
+        92.91201199154193
       ]
     }
   },

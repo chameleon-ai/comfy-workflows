@@ -1,8 +1,8 @@
 {
   "id": "79717d3d-0d03-4370-b710-858091e787d2",
   "revision": 0,
-  "last_node_id": 90,
-  "last_link_id": 181,
+  "last_node_id": 91,
+  "last_link_id": 182,
   "nodes": [
     {
       "id": 48,
@@ -205,8 +205,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 7,
-          "lastNodeId": 90,
-          "lastLinkId": 181,
+          "lastNodeId": 91,
+          "lastLinkId": 182,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -754,9 +754,10 @@
               }
             ],
             "properties": {
-              "aux_id": "An1X3R/Anima-Artist-Mixer",
+              "cnr_id": "anima-artist-mixer",
               "ver": "6574088890a48ab528aad88bcbed8c6cb872a2e8",
-              "Node name for S&R": "AnimaArtistPack"
+              "Node name for S&R": "AnimaArtistPack",
+              "aux_id": "An1X3R/Anima-Artist-Mixer"
             },
             "widgets_values": [
               "@hiyama_yuu_\\(wee259hiyama\\)\n@aono3\n@dilan_griz ",
@@ -822,47 +823,6 @@
             ],
             "color": "#232",
             "bgcolor": "#353"
-          },
-          {
-            "id": 90,
-            "type": "AnimaArtistOptions",
-            "pos": [
-              988.4279253714083,
-              375.1695760776119
-            ],
-            "size": [
-              316.68334045410154,
-              178
-            ],
-            "flags": {},
-            "order": 5,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-              {
-                "localized_name": "advanced_options",
-                "name": "advanced_options",
-                "type": "ANIMA_OPTS",
-                "links": [
-                  170
-                ]
-              }
-            ],
-            "properties": {
-              "aux_id": "An1X3R/Anima-Artist-Mixer",
-              "ver": "6574088890a48ab528aad88bcbed8c6cb872a2e8",
-              "Node name for S&R": "AnimaArtistOptions"
-            },
-            "widgets_values": [
-              0,
-              13,
-              0,
-              0.5,
-              true,
-              ""
-            ],
-            "color": "#2a363b",
-            "bgcolor": "#3f5159"
           },
           {
             "id": 8,
@@ -949,7 +909,7 @@
                 "name": "advanced_options",
                 "shape": 7,
                 "type": "ANIMA_OPTS",
-                "link": 170
+                "link": 182
               },
               {
                 "localized_name": "enabled",
@@ -980,9 +940,10 @@
               }
             ],
             "properties": {
-              "aux_id": "An1X3R/Anima-Artist-Mixer",
+              "cnr_id": "anima-artist-mixer",
               "ver": "6574088890a48ab528aad88bcbed8c6cb872a2e8",
-              "Node name for S&R": "AnimaArtistCrossAttn"
+              "Node name for S&R": "AnimaArtistCrossAttn",
+              "aux_id": "An1X3R/Anima-Artist-Mixer"
             },
             "widgets_values": [
               "output_avg",
@@ -1147,13 +1108,60 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              434816171263836,
+              843770115991014,
               "randomize",
               34,
               4,
               "er_sde",
               "simple",
               1
+            ]
+          },
+          {
+            "id": 91,
+            "type": "AnimaArtistOptions",
+            "pos": [
+              984.3036101804252,
+              389.9385437194081
+            ],
+            "size": [
+              329.73333740234375,
+              370
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "advanced_options",
+                "name": "advanced_options",
+                "type": "ANIMA_OPTS",
+                "links": [
+                  182
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "anima-artist-mixer",
+              "ver": "d21b46c576bed4895e70b35842c6d3c5e850664d",
+              "Node name for S&R": "AnimaArtistOptions"
+            },
+            "widgets_values": [
+              0,
+              13,
+              0,
+              0.5,
+              true,
+              0,
+              1,
+              false,
+              6,
+              false,
+              1,
+              0,
+              -1,
+              ""
             ]
           }
         ],
@@ -1353,14 +1361,6 @@
             "type": "STRING"
           },
           {
-            "id": 170,
-            "origin_id": 90,
-            "origin_slot": 0,
-            "target_id": 87,
-            "target_slot": 2,
-            "type": "ANIMA_OPTS"
-          },
-          {
             "id": 176,
             "origin_id": 8,
             "origin_slot": 0,
@@ -1407,6 +1407,14 @@
             "target_id": 28,
             "target_slot": 2,
             "type": "INT"
+          },
+          {
+            "id": 182,
+            "origin_id": 91,
+            "origin_slot": 0,
+            "target_id": 87,
+            "target_slot": 2,
+            "type": "ANIMA_OPTS"
           }
         ],
         "extra": {}
@@ -1415,7 +1423,7 @@
   },
   "config": {},
   "extra": {
-    "frontendVersion": "1.44.19",
+    "frontendVersion": "1.45.15",
     "workflowRendererVersion": "Vue-corrected",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
@@ -1424,8 +1432,8 @@
     "ds": {
       "scale": 1.0161968007395081,
       "offset": [
-        383.3790032082447,
-        20.92415628150126
+        403.06023029481446,
+        27.812585761800708
       ]
     }
   },
