@@ -1,32 +1,9 @@
 {
   "id": "f7a250a1-53fb-496b-8c39-c60d9e764028",
   "revision": 0,
-  "last_node_id": 86,
+  "last_node_id": 87,
   "last_link_id": 146,
   "nodes": [
-    {
-      "id": 48,
-      "type": "MarkdownNote",
-      "pos": [
-        -740,
-        130
-      ],
-      "size": [
-        670,
-        929.34375
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "## About Anima\n\n[Anima](https://huggingface.co/circlestone-labs/Anima) (2B-parameter, CircleStone/Comfy Org): Anime/non-photorealistic text-to-image model (no realism). Preview version trained on anime; final version to improve details.\n\nLimitations: poor realism (intentional), weak high-res/text, plain style.\n\n## Model Links (for Local Users)\n\n**text_encoders**\n\n- [qwen_3_06b_base.safetensors](https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/text_encoders/qwen_3_06b_base.safetensors)\n\n**vae**\n\n- [qwen_image_vae.safetensors](https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/vae/qwen_image_vae.safetensors)\n\n**diffusion_models**\n\n- [anima-preview3-base.safetensors](https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-preview3-base.safetensors)\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 text_encoders/\n│   │   └── qwen_3_06b_base.safetensors\n│   ├── 📂 vae/\n│   │   └── qwen_image_vae.safetensors\n│   └── 📂 diffusion_models/\n│       └── anima-preview3-base.safetensors)\n```\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud will be updated after the stable release; nightly-supported models may not be included yet, please wait for the next stable release.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/Comfy-Org/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
     {
       "id": 86,
       "type": "PreviewImage",
@@ -93,6 +70,29 @@
       "widgets_values": [
         "Anima"
       ]
+    },
+    {
+      "id": 87,
+      "type": "MarkdownNote",
+      "pos": [
+        -719.0403443594382,
+        149.8854356035105
+      ],
+      "size": [
+        670,
+        960
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Guide: [Subgraph](https://docs.comfy.org/interface/features/subgraph)\n\n## Model Links (for Local Users)\n\n**text_encoders**\n\n- [qwen_3_06b_base.safetensors](https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/text_encoders/qwen_3_06b_base.safetensors)\n\n**vae**\n\n- [qwen_image_vae.safetensors](https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/vae/qwen_image_vae.safetensors)\n\n**diffusion_models**\n\n- [anima-base-v1.0.safetensors](https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-base-v1.0.safetensors)\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 text_encoders/\n│   │   └── qwen_3_06b_base.safetensors\n│   ├── 📂 vae/\n│   │   └── qwen_image_vae.safetensors\n│   └── 📂 diffusion_models/\n│       └── anima-base-v1.0.safetensors\n```\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
     },
     {
       "id": 60,
@@ -186,18 +186,6 @@
             "cfg"
           ],
           [
-            "44",
-            "unet_name"
-          ],
-          [
-            "45",
-            "clip_name"
-          ],
-          [
-            "15",
-            "vae_name"
-          ],
-          [
             "64",
             "string_b"
           ],
@@ -253,7 +241,7 @@
         "version": 1,
         "state": {
           "lastGroupId": 6,
-          "lastNodeId": 86,
+          "lastNodeId": 87,
           "lastLinkId": 146,
           "lastRerouteId": 0
         },
@@ -266,7 +254,7 @@
             -330,
             530,
             152.81666564941406,
-            288
+            228
           ]
         },
         "outputNode": {
@@ -343,42 +331,6 @@
             ]
           },
           {
-            "id": "c59194ea-015c-41a7-8edd-ae7ffc220b63",
-            "name": "unet_name",
-            "type": "COMBO",
-            "linkIds": [
-              101
-            ],
-            "pos": [
-              -201.18333435058594,
-              654
-            ]
-          },
-          {
-            "id": "e655aa3b-2db7-4e25-9ea2-61550fa7ae2d",
-            "name": "clip_name",
-            "type": "COMBO",
-            "linkIds": [
-              102
-            ],
-            "pos": [
-              -201.18333435058594,
-              674
-            ]
-          },
-          {
-            "id": "94965a7a-74dd-4f5a-87e3-9f87995d554f",
-            "name": "vae_name",
-            "type": "COMBO",
-            "linkIds": [
-              103
-            ],
-            "pos": [
-              -201.18333435058594,
-              694
-            ]
-          },
-          {
             "id": "fbc076d3-7e36-484a-a5ca-eeab2491bf9f",
             "name": "string_b",
             "type": "STRING",
@@ -388,7 +340,7 @@
             "label": "negative",
             "pos": [
               -201.18333435058594,
-              714
+              654
             ]
           },
           {
@@ -400,7 +352,7 @@
             ],
             "pos": [
               -201.18333435058594,
-              734
+              674
             ]
           },
           {
@@ -414,7 +366,7 @@
             ],
             "pos": [
               -201.18333435058594,
-              754
+              694
             ]
           },
           {
@@ -427,7 +379,7 @@
             "label": "upscaled_steps",
             "pos": [
               -201.18333435058594,
-              774
+              714
             ]
           }
         ],
@@ -475,17 +427,7 @@
             "flags": {},
             "order": 10,
             "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "clip_name",
-                "name": "clip_name",
-                "type": "COMBO",
-                "widget": {
-                  "name": "clip_name"
-                },
-                "link": 102
-              }
-            ],
+            "inputs": [],
             "outputs": [
               {
                 "localized_name": "CLIP",
@@ -652,17 +594,7 @@
             "flags": {},
             "order": 9,
             "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "unet_name",
-                "name": "unet_name",
-                "type": "COMBO",
-                "widget": {
-                  "name": "unet_name"
-                },
-                "link": 101
-              }
-            ],
+            "inputs": [],
             "outputs": [
               {
                 "localized_name": "MODEL",
@@ -824,17 +756,7 @@
             "flags": {},
             "order": 6,
             "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "vae_name",
-                "name": "vae_name",
-                "type": "COMBO",
-                "widget": {
-                  "name": "vae_name"
-                },
-                "link": 103
-              }
-            ],
+            "inputs": [],
             "outputs": [
               {
                 "localized_name": "VAE",
@@ -866,7 +788,7 @@
               ]
             },
             "widgets_values": [
-              "anima_vae.safetensors"
+              "qwen_image_vae.safetensors"
             ]
           },
           {
@@ -1894,30 +1816,6 @@
             "type": "FLOAT"
           },
           {
-            "id": 101,
-            "origin_id": -10,
-            "origin_slot": 5,
-            "target_id": 44,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
-            "id": 102,
-            "origin_id": -10,
-            "origin_slot": 6,
-            "target_id": 45,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
-            "id": 103,
-            "origin_id": -10,
-            "origin_slot": 7,
-            "target_id": 15,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
             "id": 104,
             "origin_id": -10,
             "origin_slot": 0,
@@ -1960,7 +1858,7 @@
           {
             "id": 109,
             "origin_id": -10,
-            "origin_slot": 8,
+            "origin_slot": 5,
             "target_id": 64,
             "target_slot": 1,
             "type": "STRING"
@@ -1968,7 +1866,7 @@
           {
             "id": 110,
             "origin_id": -10,
-            "origin_slot": 9,
+            "origin_slot": 6,
             "target_id": 28,
             "target_slot": 2,
             "type": "INT"
@@ -1984,7 +1882,7 @@
           {
             "id": 113,
             "origin_id": -10,
-            "origin_slot": 10,
+            "origin_slot": 7,
             "target_id": 67,
             "target_slot": 1,
             "type": "FLOAT"
@@ -2056,7 +1954,7 @@
           {
             "id": 123,
             "origin_id": -10,
-            "origin_slot": 10,
+            "origin_slot": 7,
             "target_id": 70,
             "target_slot": 1,
             "type": "FLOAT,INT,BOOLEAN"
@@ -2064,7 +1962,7 @@
           {
             "id": 127,
             "origin_id": -10,
-            "origin_slot": 10,
+            "origin_slot": 7,
             "target_id": 73,
             "target_slot": 1,
             "type": "FLOAT,INT,BOOLEAN"
@@ -2128,7 +2026,7 @@
           {
             "id": 136,
             "origin_id": -10,
-            "origin_slot": 11,
+            "origin_slot": 8,
             "target_id": 77,
             "target_slot": 0,
             "type": "INT"
@@ -2180,17 +2078,17 @@
   },
   "config": {},
   "extra": {
-    "frontendVersion": "1.43.18",
+    "frontendVersion": "1.45.15",
     "workflowRendererVersion": "Vue-corrected",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.7258011182487525,
+      "scale": 0.7983812300736279,
       "offset": [
-        559.2169477244339,
-        78.82735613278895
+        1052.4369536669672,
+        94.31277086588511
       ]
     }
   },
