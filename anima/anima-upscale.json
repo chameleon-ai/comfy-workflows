@@ -25,7 +25,13 @@
           "link": 146
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.22.0",
@@ -54,7 +60,13 @@
           "link": 94
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.11.1",
@@ -425,7 +437,7 @@
               150
             ],
             "flags": {},
-            "order": 10,
+            "order": 0,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -592,7 +604,7 @@
               130
             ],
             "flags": {},
-            "order": 9,
+            "order": 1,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -642,7 +654,7 @@
               88
             ],
             "flags": {},
-            "order": 4,
+            "order": 7,
             "mode": 0,
             "inputs": [
               {
@@ -754,7 +766,7 @@
               100
             ],
             "flags": {},
-            "order": 6,
+            "order": 2,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -1002,7 +1014,7 @@
               150
             ],
             "flags": {},
-            "order": 8,
+            "order": 10,
             "mode": 0,
             "inputs": [
               {
@@ -1119,7 +1131,7 @@
               140
             ],
             "flags": {},
-            "order": 5,
+            "order": 8,
             "mode": 0,
             "inputs": [
               {
@@ -1180,7 +1192,7 @@
               620
             ],
             "flags": {},
-            "order": 7,
+            "order": 9,
             "mode": 0,
             "inputs": [
               {
@@ -1281,7 +1293,7 @@
               296.25381018110727
             ],
             "flags": {},
-            "order": 0,
+            "order": 3,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -1318,7 +1330,7 @@
               240.12421553281433
             ],
             "flags": {},
-            "order": 1,
+            "order": 4,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -1355,7 +1367,7 @@
               82
             ],
             "flags": {},
-            "order": 2,
+            "order": 5,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -1468,7 +1480,7 @@
               "Node name for S&R": "PrimitiveInt"
             },
             "widgets_values": [
-              16,
+              17,
               "fixed"
             ]
           },
@@ -1626,7 +1638,7 @@
               90
             ],
             "flags": {},
-            "order": 3,
+            "order": 6,
             "mode": 0,
             "inputs": [
               {
@@ -2078,17 +2090,17 @@
   },
   "config": {},
   "extra": {
-    "frontendVersion": "1.45.15",
+    "frontendVersion": "1.45.19",
     "workflowRendererVersion": "Vue-corrected",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.7983812300736279,
+      "scale": 0.7258011182487526,
       "offset": [
-        1052.4369536669672,
-        94.31277086588511
+        641.6307026610995,
+        28.917946897910365
       ]
     }
   },
